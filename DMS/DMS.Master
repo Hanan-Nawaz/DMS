@@ -57,7 +57,16 @@
                 <div class="position-sticky">
                     <div class="list-group list-group-flush mx-2 mt-4">
 
-                        <asp:LinkButton runat="server" ID="labour_data" href="LabourData.aspx" class="list-group-item list-group-item-action py-2 ripple"><i class="fas fa-users fa-fw me-3"></i><span>Labour Data</span></asp:LinkButton>
+                        <div class="dropdown">
+                            <button class="btn btn-primary dropdown-toggle text-center list-group-item list-group-item-action py-2 ripple" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                               <i class="fas fa-users"></i> Labour Data
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <a class="dropdown-item" href="LabourData.aspx"> Labour Data Form</a>
+                                <a class="dropdown-item" href="#">Add Range of Annual Gross Renvenue</a>
+                                <a class="dropdown-item" href="#">Add Model</a>
+                            </div>
+                        </div>
 
                     </div>
                 </div>

@@ -29,8 +29,14 @@
                     <div class="row">
                         <div class="col-md-6">
                             <label>Annual Gross Renvenue</label>
-                            <div class="form-group">
-                                <asp:TextBox CssClass="form-control" ID="tb_LD_AGR" runat="server" placeholder="Annual Gross Renvenue" required="true"></asp:TextBox>
+                             <div class="form-group">
+                                <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+                                    <ContentTemplate>
+                                        <asp:DropDownList CssClass="form-control" ID="ddl_LD_AGR" runat="server" AutoPostBack="true">
+                                            <asp:ListItem Value="0">Select Annual Gross Renvenue</asp:ListItem>
+                                        </asp:DropDownList>
+                                    </ContentTemplate>
+                                </asp:UpdatePanel>
                             </div>
                         </div>
                         <div class="col-md-6">
@@ -69,44 +75,10 @@
                                 </asp:UpdatePanel>
                             </div>
                         </div>
-                    </div>
-
-                    <div class="row">
-                        <div class="col-md">
-                            <label>Please select one</label>
-                            <div class="form-group d-flex justify-content-center">
-                                <label runat="server" id="lbl_radioC1" class="btn btn-primary mr-1">
-                                    <asp:RadioButton runat="server" ID="radioC1" GroupName="radioC" />
-                                    GM Only
-                                </label>
-                                <label runat="server" id="lbl_radioC2" class="btn btn-primary mr-1">
-                                    <asp:RadioButton runat="server" ID="radioC2" GroupName="radioC" />
-                                    GM & AM Only 
-                                </label>
-
-                                <label runat="server" id="Label1" class="btn btn-primary mr-1">
-                                    <asp:RadioButton runat="server" ID="RadioButton1" GroupName="radioC"  />
-                                    AM Only
-                                </label>
-                                <label runat="server" id="Label2" class="btn btn-primary mr-1">
-                                    <asp:RadioButton runat="server" ID="RadioButton2" GroupName="radioC" />
-                                    AM & CREW Only 
-                                </label>
-
-                                <label runat="server" id="Label3" class="btn btn-primary mr-1">
-                                    <asp:RadioButton runat="server" ID="RadioButton3" GroupName="radioC" />
-                                    CREW Only
-                                </label>
-                                <label runat="server" id="Label4" class="btn btn-primary mr-1">
-                                    <asp:RadioButton runat="server" ID="RadioButton4" GroupName="radioC" />
-                                    GM & CREW Only 
-                                </label>
-
-                                <label runat="server" id="Label5" class="btn btn-primary">
-                                    <asp:RadioButton runat="server" ID="RadioButton5" GroupName="radioC" />
-                                    ALL 
-                                </label>
-
+                        <div class="col-md-6">
+                            <label>Labour Data Date</label>
+                            <div class="form-group">
+                                <asp:TextBox CssClass="form-control" ID="tb_LD_Date" TextMode="Date" runat="server" placeholder="--"></asp:TextBox>
                             </div>
                         </div>
                     </div>
