@@ -42,7 +42,7 @@
                         <div class="col-md-6">
                             <label>Annual Operating Days</label>
                             <div class="form-group">
-                                <asp:TextBox CssClass="form-control" ID="tb_LD_AOD" runat="server" placeholder="Annual Operating Days" required></asp:TextBox>
+                                <asp:TextBox CssClass="form-control" ID="tb_LD_AOD" runat="server" placeholder="Annual Operating Days" ></asp:TextBox>
                             </div>
                         </div>
                     </div>
@@ -51,7 +51,7 @@
                         <div class="col-md-6">
                             <label>Daily Opearting Hours</label>
                             <div class="form-group">
-                                <asp:TextBox CssClass="form-control" ID="tb_LD_DOH" runat="server" placeholder="Daily Opearting Hours" required></asp:TextBox>
+                                <asp:TextBox CssClass="form-control" ID="tb_LD_DOH" runat="server" placeholder="Daily Opearting Hours" ></asp:TextBox>
                             </div>
                         </div>
                         <div class="col-md-6">
@@ -92,25 +92,25 @@
                         <div class="col-md-3">
                             <label>Number of Labour</label>
                             <div class="form-group">
-                                <asp:TextBox CssClass="form-control" ID="TextBox1" runat="server" placeholder="Number of Labour" required></asp:TextBox>
+                                <asp:TextBox CssClass="form-control" ID="tb_LDGM_NoL" runat="server" placeholder="Number of Labour" ></asp:TextBox>
                             </div>
                         </div>
                         <div class="col-md-3">
                             <label>Daily Hours Worked</label>
                             <div class="form-group">
-                                <asp:TextBox CssClass="form-control" ID="TextBox2" runat="server" placeholder="Daily Hours Worked" required></asp:TextBox>
+                                <asp:TextBox CssClass="form-control" ID="tb_LDGM_DOW" runat="server" placeholder="Daily Hours Worked" ></asp:TextBox>
                             </div>
                         </div>
                         <div class="col-md-3">
                             <label>Annual Days Worked</label>
                             <div class="form-group">
-                                <asp:TextBox CssClass="form-control" ID="TextBox3" runat="server" placeholder="Annual Days Worked" required></asp:TextBox>
+                                <asp:TextBox CssClass="form-control" ID="tb_LDGM_ADW" runat="server" placeholder="Annual Days Worked" ></asp:TextBox>
                             </div>
                         </div>
                         <div class="col-md-3">
                             <label>Hourly Wage $</label>
                             <div class="form-group">
-                                <asp:TextBox CssClass="form-control" ID="TextBox4" runat="server" placeholder="Hourly Wage $" required></asp:TextBox>
+                                <asp:TextBox CssClass="form-control" ID="tb_LDGM_HW" runat="server" placeholder="Hourly Wage $" ></asp:TextBox>
                             </div>
                         </div>
                     </div>
@@ -124,25 +124,25 @@
                         <div class="col-md-3">
                             <label>Number of Labour</label>
                             <div class="form-group">
-                                <asp:TextBox CssClass="form-control" ID="TextBox5" runat="server" placeholder="Number of Labour" required></asp:TextBox>
+                                <asp:TextBox CssClass="form-control" ID="tb_LDAM_NoL" runat="server" placeholder="Number of Labour" ></asp:TextBox>
                             </div>
                         </div>
                         <div class="col-md-3">
                             <label>Daily Hours Worked</label>
                             <div class="form-group">
-                                <asp:TextBox CssClass="form-control" ID="TextBox6" runat="server" placeholder="Daily Hours Worked" required></asp:TextBox>
+                                <asp:TextBox CssClass="form-control" ID="tb_LDAM_DOW" runat="server" placeholder="Daily Hours Worked" ></asp:TextBox>
                             </div>
                         </div>
                         <div class="col-md-3">
                             <label>Annual Days Worked</label>
                             <div class="form-group">
-                                <asp:TextBox CssClass="form-control" ID="TextBox7" runat="server" placeholder="Annual Days Worked" required></asp:TextBox>
+                                <asp:TextBox CssClass="form-control" ID="tb_LDAM_ADW" runat="server" placeholder="Annual Days Worked" ></asp:TextBox>
                             </div>
                         </div>
                         <div class="col-md-3">
                             <label>Hourly Wage $</label>
                             <div class="form-group">
-                                <asp:TextBox CssClass="form-control" ID="TextBox8" runat="server" placeholder="Hourly Wage $" required></asp:TextBox>
+                                <asp:TextBox CssClass="form-control" ID="tb_LDAM_HW" runat="server" placeholder="Hourly Wage $" ></asp:TextBox>
                             </div>
                         </div>
                     </div>
@@ -155,25 +155,25 @@
                         <div class="col-md-3">
                             <label>Number of Labour</label>
                             <div class="form-group">
-                                <asp:TextBox CssClass="form-control" ID="TextBox9" runat="server" placeholder="Number of Labour" required></asp:TextBox>
+                                <asp:TextBox CssClass="form-control" ID="tb_LDCREW_NoL" runat="server" placeholder="Number of Labour" ></asp:TextBox>
                             </div>
                         </div>
                         <div class="col-md-3">
                             <label>Daily Hours Worked</label>
                             <div class="form-group">
-                                <asp:TextBox CssClass="form-control" ID="TextBox10" runat="server" placeholder="Daily Hours Worked" required></asp:TextBox>
+                                <asp:TextBox CssClass="form-control" ID="tb_LDCREW_DOW" runat="server" placeholder="Daily Hours Worked" ></asp:TextBox>
                             </div>
                         </div>
                         <div class="col-md-3">
                             <label>Annual Days Worked</label>
                             <div class="form-group">
-                                <asp:TextBox CssClass="form-control" ID="TextBox11" runat="server" placeholder="Annual Days Worked" required></asp:TextBox>
+                                <asp:TextBox CssClass="form-control" ID="tb_LDCREW_ADW" runat="server" placeholder="Annual Days Worked" ></asp:TextBox>
                             </div>
                         </div>
                         <div class="col-md-3">
                             <label>Hourly Wage $</label>
                             <div class="form-group">
-                                <asp:TextBox CssClass="form-control" ID="TextBox12" runat="server" placeholder="Hourly Wage $" required></asp:TextBox>
+                                <asp:TextBox CssClass="form-control" ID="tb_LDCREW_HW" runat="server" placeholder="Hourly Wage $" ></asp:TextBox>
                             </div>
                         </div>
                     </div>
@@ -187,25 +187,25 @@
                         <div class="col-md-3">
                             <label>GM Labour</label>
                             <div class="form-group">
-                                <asp:TextBox CssClass="form-control" ID="TextBox13" runat="server" Enabled="false" placeholder="GM Labour"></asp:TextBox>
+                                <asp:TextBox CssClass="form-control" ID="tb_LDGM_W" runat="server" Enabled="false" placeholder="GM Labour"></asp:TextBox>
                             </div>
                         </div>
                         <div class="col-md-3">
                             <label>AM Labour</label>
                             <div class="form-group">
-                                <asp:TextBox CssClass="form-control" ID="TextBox14" runat="server" Enabled="false" placeholder="AM Labour"></asp:TextBox>
+                                <asp:TextBox CssClass="form-control" ID="tb_LDAM_W" runat="server" Enabled="false" placeholder="AM Labour"></asp:TextBox>
                             </div>
                         </div>
                         <div class="col-md-3">
                             <label>CREW Labour</label>
                             <div class="form-group">
-                                <asp:TextBox CssClass="form-control" ID="TextBox15" runat="server" Enabled="false" placeholder="CREW Labour"></asp:TextBox>
+                                <asp:TextBox CssClass="form-control" ID="tb_LDCREW_W" runat="server" Enabled="false" placeholder="CREW Labour"></asp:TextBox>
                             </div>
                         </div>
                         <div class="col-md-3">
                             <label>Total Wages </label>
                             <div class="form-group">
-                                <asp:TextBox CssClass="form-control" ID="TextBox16" runat="server" Enabled="false" placeholder="Total Wages"></asp:TextBox>
+                                <asp:TextBox CssClass="form-control" ID="tb_LD_TW" runat="server" Enabled="false" placeholder="Total Wages"></asp:TextBox>
                             </div>
                         </div>
                     </div>

@@ -96,148 +96,148 @@ namespace DMS
         protected global::System.Web.UI.WebControls.TextBox tb_LD_Date;
 
         /// <summary>
-        /// TextBox1 control.
+        /// tb_LDGM_NoL control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox1;
+        protected global::System.Web.UI.WebControls.TextBox tb_LDGM_NoL;
 
         /// <summary>
-        /// TextBox2 control.
+        /// tb_LDGM_DOW control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox2;
+        protected global::System.Web.UI.WebControls.TextBox tb_LDGM_DOW;
 
         /// <summary>
-        /// TextBox3 control.
+        /// tb_LDGM_ADW control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox3;
+        protected global::System.Web.UI.WebControls.TextBox tb_LDGM_ADW;
 
         /// <summary>
-        /// TextBox4 control.
+        /// tb_LDGM_HW control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox4;
+        protected global::System.Web.UI.WebControls.TextBox tb_LDGM_HW;
 
         /// <summary>
-        /// TextBox5 control.
+        /// tb_LDAM_NoL control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox5;
+        protected global::System.Web.UI.WebControls.TextBox tb_LDAM_NoL;
 
         /// <summary>
-        /// TextBox6 control.
+        /// tb_LDAM_DOW control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox6;
+        protected global::System.Web.UI.WebControls.TextBox tb_LDAM_DOW;
 
         /// <summary>
-        /// TextBox7 control.
+        /// tb_LDAM_ADW control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox7;
+        protected global::System.Web.UI.WebControls.TextBox tb_LDAM_ADW;
 
         /// <summary>
-        /// TextBox8 control.
+        /// tb_LDAM_HW control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox8;
+        protected global::System.Web.UI.WebControls.TextBox tb_LDAM_HW;
 
         /// <summary>
-        /// TextBox9 control.
+        /// tb_LDCREW_NoL control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox9;
+        protected global::System.Web.UI.WebControls.TextBox tb_LDCREW_NoL;
 
         /// <summary>
-        /// TextBox10 control.
+        /// tb_LDCREW_DOW control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox10;
+        protected global::System.Web.UI.WebControls.TextBox tb_LDCREW_DOW;
 
         /// <summary>
-        /// TextBox11 control.
+        /// tb_LDCREW_ADW control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox11;
+        protected global::System.Web.UI.WebControls.TextBox tb_LDCREW_ADW;
 
         /// <summary>
-        /// TextBox12 control.
+        /// tb_LDCREW_HW control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox12;
+        protected global::System.Web.UI.WebControls.TextBox tb_LDCREW_HW;
 
         /// <summary>
-        /// TextBox13 control.
+        /// tb_LDGM_W control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox13;
+        protected global::System.Web.UI.WebControls.TextBox tb_LDGM_W;
 
         /// <summary>
-        /// TextBox14 control.
+        /// tb_LDAM_W control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox14;
+        protected global::System.Web.UI.WebControls.TextBox tb_LDAM_W;
 
         /// <summary>
-        /// TextBox15 control.
+        /// tb_LDCREW_W control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox15;
+        protected global::System.Web.UI.WebControls.TextBox tb_LDCREW_W;
 
         /// <summary>
-        /// TextBox16 control.
+        /// tb_LD_TW control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox16;
+        protected global::System.Web.UI.WebControls.TextBox tb_LD_TW;
 
         /// <summary>
         /// btn_LD_Calculate control.
