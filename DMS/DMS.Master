@@ -15,7 +15,12 @@
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 
+
     <link rel="stylesheet" href="CSS/master.css" type="text/css" />
+
+
+
+
 
     <link
         rel="stylesheet"
@@ -62,8 +67,9 @@
                             </button>
                             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                                 <a class="dropdown-item" href="LabourData.aspx"> Labour Data Form</a>
-                                <a class="dropdown-item" href="#">Add Range of Annual Gross Renvenue</a>
-                                <a class="dropdown-item" href="#">Add Model</a>
+                                <a class="dropdown-item" href="ViewLabourData.aspx"> View Labour Data</a>
+                                <a class="dropdown-item" href="ViewAnnualGrossRevenue.aspx">View Annual Gross Revenue</a>
+                                <a class="dropdown-item" href="ViewModel.aspx">View Model</a>
                             </div>
                         </div>
 
