@@ -1006,7 +1006,7 @@ namespace DMS
             cn.ConnectionString = ConfigurationManager.ConnectionStrings["con"].ConnectionString;
 
             DateTime date = DateTime.Today;
-            string sqlStmt = "insert into labor_data_tb (annual_gross_revenue,annual_operating_days,daily_operating_hrs,annual_operating_hrs,model,labour_data_date,am_no_labor,am_daily_hrs_worked,am_annual_days_worked,am_hourly_wages,am_annual_wages,crew_no_labor,crew_daily_hrs_worked,crew_annual_days_worked,crew_hourly_wages,crew_annual_wages,gm_no_labor,gm_daily_hrs_worked,gm_annual_days_worked,gm_hourly_wages,gm_annual_wages,total_annual_wages,saved_date,notes) values (@annual_gross_revenue,@annual_operating_days,@daily_operating_hrs,@annual_operating_hrs,@model,@labour_data_date,@am_no_labor,@am_daily_hrs_worked,@am_annual_days_worked,@am_hourly_wages,@am_annual_wages,@crew_no_labor,@crew_daily_hrs_worked,@crew_annual_days_worked,@crew_hourly_wages,@crew_annual_wages,@gm_no_labor,@gm_daily_hrs_worked,@gm_annual_days_worked,@gm_hourly_wages,@gm_annual_wages,@total_annual_wages,@saved_date,@notes)";
+            string sqlStmt = "UPDATE labor_data_tb SET annual_gross_revenue = @annual_gross_revenue,annual_operating_days = @annual_operating_days,daily_operating_hrs = @daily_operating_hrs,annual_operating_hrs = @annual_operating_hrs,model = @model,labour_data_date = @labour_data_date,am_no_labor = @am_no_labor,am_daily_hrs_worked = @am_daily_hrs_worked,am_annual_days_worked = @am_annual_days_worked,am_hourly_wages = @am_hourly_wages,am_annual_wages = @am_annual_wages,crew_no_labor = @crew_no_labor,crew_daily_hrs_worked = @crew_daily_hrs_worked,crew_annual_days_worked = @crew_annual_days_worked,crew_hourly_wages = @crew_hourly_wages,crew_annual_wages = @crew_annual_wages,gm_no_labor = @gm_no_labor,gm_daily_hrs_worked = @gm_daily_hrs_worked,gm_annual_days_worked = @gm_annual_days_worked,gm_hourly_wages = @gm_hourly_wages,gm_annual_wages = @gm_annual_wages,total_annual_wages = @total_annual_wages,notes = @notes WHERE id ='" + id + "'";
 
             SqlCommand cmd = new SqlCommand(sqlStmt, cn);
 
@@ -1114,21 +1114,7 @@ namespace DMS
 
                 if (i > 0)
                 {
-                    SqlConnection con = new SqlConnection();
-                    con.ConnectionString = ConfigurationManager.ConnectionStrings["con"].ConnectionString; con.Open();
-
-                    string query = "DELETE FROM labor_data_tb WHERE id='" + id + "'";
-                    SqlCommand comd = new SqlCommand(query, con);
-                    int j = comd.ExecuteNonQuery();
-
-                    if(j > 0)
-                    {
-                        ClientScript.RegisterClientScriptBlock(this.GetType(), "k", "swal('congratulations', 'Labour Data Updated to DB Succesfully :)', 'success')", true);
-                    }
-                    else
-                    {
-                        ClientScript.RegisterClientScriptBlock(this.GetType(), "k", "swal('Error', 'Unknown Error! Try Again :)', 'error')", true);
-                    }
+                    ClientScript.RegisterClientScriptBlock(this.GetType(), "k", "swal('congratulations', 'Labour Data Updated to DB Succesfully :)', 'success')", true);
                 }
                 else
                 {

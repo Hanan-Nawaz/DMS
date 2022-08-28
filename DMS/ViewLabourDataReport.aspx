@@ -17,7 +17,7 @@
                     <div class="row">
                         <div class="col">
                             <center>
-                                <label style="color: blue; font-size: 20px; user-select: none;"><i class="fas fa-users"></i>Labour Data</label>
+                                <label style="color: blue; font-size: 20px; user-select: none;"><i class="fas fa-eye"></i>View Labour Data</label>
                             </center>
                         </div>
                     </div>

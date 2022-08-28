@@ -1,7 +1,6 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/DMS.Master" AutoEventWireup="true" CodeBehind="ViewLabourData.aspx.cs" Inherits="DMS.ViewLabourData" %>
-
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/DMS.Master" AutoEventWireup="true" CodeBehind="ViewSalesVolumeData.aspx.cs" Inherits="DMS.ViewSalesVolumeData" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-    <title>View LD - DMS</title>
+       <title>View Sales Volume Data - DMS</title>
         <link rel="stylesheet" href="CSS/girdview.css" type="text/css" />
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-sweetalert/1.0.1/sweetalert.min.js" integrity="sha512-MqEDqB7me8klOYxXXQlB4LaNf9V9S0+sG1i8LtPOYmHqICuEZ9ZLbyV3qIfADg2UJcLyCm4fawNiFvnYbcBJ1w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -78,7 +77,7 @@
 
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <asp:ScriptManager ID="ScriptManager1" runat="server" />
+     <asp:ScriptManager ID="ScriptManager1" runat="server" />
 
     <div class="container-fluid">
 
@@ -88,7 +87,7 @@
                     <div class="row">
                         <div class="col">
                             <center>
-                                <label style="color: blue; font-size: 20px; user-select: none;"><i class="fas fa-list fa-fw "></i>View Labour's Data </label>
+                                <label style="color: blue; font-size: 20px; user-select: none;"><i class="fas fa-list fa-fw "></i>View Sales Volume Data </label>
                             </center>
                         </div>
                     </div>
@@ -107,30 +106,18 @@
                                     <div style="overflow: auto; width: 100%;">
                                         <asp:GridView ID="girdviewLD" runat="server" AutoGenerateColumns="false" Width="100%" PagerSettings-FirstPageText="First" PagerSettings-LastPageText="Last" ShowFooter="true" FooterStyle-CssClass="mydatagrid_footer" CssClass="mydatagrid" PagerStyle-CssClass="pager" HeaderStyle-CssClass="header" RowStyle-CssClass="rows" AllowPaging="True" PageSize="10" OnPageIndexChanging="girdview_PageIndexChanging" HeaderStyle-HorizontalAlign="Center" RowStyle-HorizontalAlign="Center">
                                             <Columns>
-                                                <asp:BoundField HeaderText="LD ID" Visible="false" DataField="id"></asp:BoundField>
-                                                <asp:BoundField HeaderText="Annual Gross Revenue" DataField="annual_gross_revenue"></asp:BoundField>
-                                                <asp:BoundField HeaderText="Annual Opearting Days" DataField="annual_operating_days"></asp:BoundField>
-                                                <asp:BoundField HeaderText="Daily Opearting Hours" DataField="daily_operating_hrs"></asp:BoundField>
-                                                <asp:BoundField HeaderText="Annual Opearting Hours" DataField="annual_operating_hrs"></asp:BoundField>
-                                                <asp:BoundField HeaderText="Model" DataField="model"></asp:BoundField>
-                                                <asp:BoundField HeaderText="Labour Data Date" DataField="labour_data_date"></asp:BoundField>
-                                                <asp:BoundField HeaderText="AM - No. of Labour" DataField="am_no_labor"></asp:BoundField>
-                                                <asp:BoundField HeaderText="AM - Daily Hours Worked" DataField="am_daily_hrs_worked"></asp:BoundField>
-                                                <asp:BoundField HeaderText="AM - Annual Days Worked" DataField="am_annual_days_worked"></asp:BoundField>
-                                                <asp:BoundField HeaderText="AM - Hourly Wages" DataField="am_hourly_wages"></asp:BoundField>
-                                                <asp:BoundField HeaderText="AM - Annual Wages" DataField="am_annual_wages"></asp:BoundField>
-                                                <asp:BoundField HeaderText="CREW - No. of Labour" DataField="crew_no_labor"></asp:BoundField>
-                                                <asp:BoundField HeaderText="CREW - Daily Hours Worked" DataField="crew_daily_hrs_worked"></asp:BoundField>
-                                                <asp:BoundField HeaderText="CREW - Annual Days Worked" DataField="crew_annual_days_worked"></asp:BoundField>
-                                                <asp:BoundField HeaderText="CREW - Hourly Wages" DataField="crew_hourly_wages"></asp:BoundField>
-                                                <asp:BoundField HeaderText="CREW - Annual Wages" DataField="crew_annual_wages"></asp:BoundField>
-                                                <asp:BoundField HeaderText="GM - No. og Labour" DataField="gm_no_labor"></asp:BoundField>
-                                                <asp:BoundField HeaderText="GM - Daily Hours Worked" DataField="gm_daily_hrs_worked"></asp:BoundField>
-                                                <asp:BoundField HeaderText="GM - Annual Days Worked" DataField="gm_annual_days_worked"></asp:BoundField>
-                                                <asp:BoundField HeaderText="GM - Hourly Wages" DataField="gm_hourly_wages"></asp:BoundField>
-                                                <asp:BoundField HeaderText="GM - Annual Wages" DataField="gm_annual_wages"></asp:BoundField>
-                                                <asp:BoundField HeaderText="Total Annual Wages" DataField="total_annual_wages"></asp:BoundField>
+                                                <asp:BoundField HeaderText="ID" DataField="id" Visible="false"></asp:BoundField>
+                                                <asp:BoundField HeaderText="Annual Gross Revenue" DataField="anum_gross_rev"></asp:BoundField>
+                                                <asp:BoundField HeaderText="Annual Opearting Days" DataField="anum_op_days"></asp:BoundField>
+                                                <asp:BoundField HeaderText="Daily Opearting Hours" DataField="daily_op_hrs"></asp:BoundField>
+                                                <asp:BoundField HeaderText="Average Sales Recipt" DataField="avg_sale_recpt"></asp:BoundField>
+                                                <asp:BoundField HeaderText="Daily Gross Revenue" DataField="daily_gross_rev"></asp:BoundField>
+                                                <asp:BoundField HeaderText="Hourly Gross Revenue" DataField="hourly_gross_rev"></asp:BoundField>
+                                                <asp:BoundField HeaderText="Hourly Sales Order" DataField="hourly_sale_ord"></asp:BoundField>
+                                                <asp:BoundField HeaderText="Daily Sales Order" DataField="daily_sale_ord"></asp:BoundField>
+                                                <asp:BoundField HeaderText="Annual Sales Order" DataField="anum_sale_ord"></asp:BoundField>
                                                 <asp:BoundField HeaderText="Saved Date" DataField="saved_date"></asp:BoundField>
+                                                <asp:BoundField HeaderText="Sales Data Date" DataField="sales_date"></asp:BoundField>
                                                 <asp:TemplateField>
                                                     <ItemTemplate>
                                                         <div>
