@@ -102,6 +102,7 @@
     <Content Include="EditLabourData.aspx" />
     <Content Include="EditSalesVolumeData.aspx" />
     <Content Include="LabourData.aspx" />
+    <Content Include="ProfitLoss.aspx" />
     <Content Include="SalesVolumeData.aspx" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
@@ -152,6 +153,13 @@
     </Compile>
     <Compile Include="LabourData.aspx.designer.cs">
       <DependentUpon>LabourData.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ProfitLoss.aspx.cs">
+      <DependentUpon>ProfitLoss.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ProfitLoss.aspx.designer.cs">
+      <DependentUpon>ProfitLoss.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SalesVolumeData.aspx.cs">

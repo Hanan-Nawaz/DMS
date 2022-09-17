@@ -83,6 +83,16 @@
                             </div>
                         </div>
 
+                        <div class="dropdown mt-2">
+                            <button class="btn btn-primary dropdown-toggle text-center list-group-item list-group-item-action py-2 ripple" type="button" id="dropdownMenuButton1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                               <i class="fas fa-newspaper"></i> Profit & Loss
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                <a class="dropdown-item" href="ProfitLoss.aspx">Profit and Loss Form</a>
+                                <a class="dropdown-item" href="ViewSalesVolumeData.aspx"> View Sales Volume Data</a>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
             </nav>

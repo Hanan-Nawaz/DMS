@@ -287,7 +287,7 @@ namespace DMS
                 string cancelHead = "Cancelled";
                 string script = "<script type=\"text/javascript\"> confirmError('" + this + "', '" + head + "', '" + headtext + "' , '" + headtype + "', '" + cancelmsg + "', '" + cancelHead + "' ); </script>";
                 ClientScript.RegisterClientScriptBlock(this.GetType(), "myscript", script);
-
+                Response.Redirect("LabourData.aspx");
                 tb_AGR.Text = "";
 
             }
@@ -329,7 +329,7 @@ namespace DMS
                 string cancelHead = "Cancelled";
                 string script = "<script type=\"text/javascript\"> confirmError('" + this + "', '" + head + "', '" + headtext + "' , '" + headtype + "', '" + cancelmsg + "', '" + cancelHead + "' ); </script>";
                 ClientScript.RegisterClientScriptBlock(this.GetType(), "myscript", script);
-
+                Response.Redirect("LabourData.aspx");
                 tb_model.Text = "";
             }
             else
