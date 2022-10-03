@@ -1,0 +1,365 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="PLData" targetNamespace="http://tempuri.org/PLData.xsd" xmlns:mstns="http://tempuri.org/PLData.xsd" xmlns="http://tempuri.org/PLData.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="con" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="con (Web.config)" ParameterPrefix="@" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.con.ConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ProfitLossTableAdapter" GeneratorDataComponentClassName="ProfitLossTableAdapter" Name="ProfitLoss" UserDataComponentName="ProfitLossTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="con (Web.config)" DbObjectName="mydms_db.dbo.ProfitLoss" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        Model, GrossSales, CashSales, CashSalesPercentage, NonCashSales, NonCashSalesPercentage, TotalSales, TotalSalesPercentage, Date, PayrollTax, Insurance, CardFee, Operator, TotalCost, TotalCostPercentage, TotalProfit, 
+                         TotalProfitPercentage, LabourModel, CostofLabor, LabourPercentage, TotalLabor, SetInsurance, SetInsurancePercentage, GetInsurance, SetPayrollTax, PayrollTaxPercentage, GetPayroll, OpEx, OpExPercentage, SetCardFee, 
+                         CardProcessingFee, CardProcessingFeePercentage, TotalOpEx, TotalOpExPercentage, Managed, ManagedPercentage, Owner, OwnerPercentage, Notes, CurrentDate
+FROM            ProfitLoss</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Model" DataSetColumn="Model" />
+              <Mapping SourceColumn="GrossSales" DataSetColumn="GrossSales" />
+              <Mapping SourceColumn="CashSales" DataSetColumn="CashSales" />
+              <Mapping SourceColumn="CashSalesPercentage" DataSetColumn="CashSalesPercentage" />
+              <Mapping SourceColumn="NonCashSales" DataSetColumn="NonCashSales" />
+              <Mapping SourceColumn="NonCashSalesPercentage" DataSetColumn="NonCashSalesPercentage" />
+              <Mapping SourceColumn="TotalSales" DataSetColumn="TotalSales" />
+              <Mapping SourceColumn="TotalSalesPercentage" DataSetColumn="TotalSalesPercentage" />
+              <Mapping SourceColumn="Date" DataSetColumn="Date" />
+              <Mapping SourceColumn="PayrollTax" DataSetColumn="PayrollTax" />
+              <Mapping SourceColumn="Insurance" DataSetColumn="Insurance" />
+              <Mapping SourceColumn="CardFee" DataSetColumn="CardFee" />
+              <Mapping SourceColumn="Operator" DataSetColumn="Operator" />
+              <Mapping SourceColumn="TotalCost" DataSetColumn="TotalCost" />
+              <Mapping SourceColumn="TotalCostPercentage" DataSetColumn="TotalCostPercentage" />
+              <Mapping SourceColumn="TotalProfit" DataSetColumn="TotalProfit" />
+              <Mapping SourceColumn="TotalProfitPercentage" DataSetColumn="TotalProfitPercentage" />
+              <Mapping SourceColumn="LabourModel" DataSetColumn="LabourModel" />
+              <Mapping SourceColumn="CostofLabor" DataSetColumn="CostofLabor" />
+              <Mapping SourceColumn="LabourPercentage" DataSetColumn="LabourPercentage" />
+              <Mapping SourceColumn="TotalLabor" DataSetColumn="TotalLabor" />
+              <Mapping SourceColumn="SetInsurance" DataSetColumn="SetInsurance" />
+              <Mapping SourceColumn="SetInsurancePercentage" DataSetColumn="SetInsurancePercentage" />
+              <Mapping SourceColumn="GetInsurance" DataSetColumn="GetInsurance" />
+              <Mapping SourceColumn="SetPayrollTax" DataSetColumn="SetPayrollTax" />
+              <Mapping SourceColumn="PayrollTaxPercentage" DataSetColumn="PayrollTaxPercentage" />
+              <Mapping SourceColumn="GetPayroll" DataSetColumn="GetPayroll" />
+              <Mapping SourceColumn="OpEx" DataSetColumn="OpEx" />
+              <Mapping SourceColumn="OpExPercentage" DataSetColumn="OpExPercentage" />
+              <Mapping SourceColumn="SetCardFee" DataSetColumn="SetCardFee" />
+              <Mapping SourceColumn="CardProcessingFee" DataSetColumn="CardProcessingFee" />
+              <Mapping SourceColumn="CardProcessingFeePercentage" DataSetColumn="CardProcessingFeePercentage" />
+              <Mapping SourceColumn="TotalOpEx" DataSetColumn="TotalOpEx" />
+              <Mapping SourceColumn="TotalOpExPercentage" DataSetColumn="TotalOpExPercentage" />
+              <Mapping SourceColumn="Managed" DataSetColumn="Managed" />
+              <Mapping SourceColumn="ManagedPercentage" DataSetColumn="ManagedPercentage" />
+              <Mapping SourceColumn="Owner" DataSetColumn="Owner" />
+              <Mapping SourceColumn="OwnerPercentage" DataSetColumn="OwnerPercentage" />
+              <Mapping SourceColumn="Notes" DataSetColumn="Notes" />
+              <Mapping SourceColumn="CurrentDate" DataSetColumn="CurrentDate" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="PLData" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_UserDSName="PLData" msprop:Generator_DataSetName="PLData">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="ProfitLoss" msprop:Generator_RowEvHandlerName="ProfitLossRowChangeEventHandler" msprop:Generator_RowDeletedName="ProfitLossRowDeleted" msprop:Generator_RowDeletingName="ProfitLossRowDeleting" msprop:Generator_RowEvArgName="ProfitLossRowChangeEvent" msprop:Generator_TablePropName="ProfitLoss" msprop:Generator_RowChangedName="ProfitLossRowChanged" msprop:Generator_RowChangingName="ProfitLossRowChanging" msprop:Generator_TableClassName="ProfitLossDataTable" msprop:Generator_RowClassName="ProfitLossRow" msprop:Generator_TableVarName="tableProfitLoss" msprop:Generator_UserTableName="ProfitLoss">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Model" msprop:Generator_ColumnPropNameInRow="Model" msprop:Generator_ColumnPropNameInTable="ModelColumn" msprop:Generator_ColumnVarNameInTable="columnModel" msprop:Generator_UserColumnName="Model">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="GrossSales" msprop:Generator_ColumnPropNameInRow="GrossSales" msprop:Generator_ColumnPropNameInTable="GrossSalesColumn" msprop:Generator_ColumnVarNameInTable="columnGrossSales" msprop:Generator_UserColumnName="GrossSales">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CashSales" msprop:Generator_ColumnPropNameInRow="CashSales" msprop:Generator_ColumnPropNameInTable="CashSalesColumn" msprop:Generator_ColumnVarNameInTable="columnCashSales" msprop:Generator_UserColumnName="CashSales">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CashSalesPercentage" msprop:Generator_ColumnPropNameInRow="CashSalesPercentage" msprop:Generator_ColumnPropNameInTable="CashSalesPercentageColumn" msprop:Generator_ColumnVarNameInTable="columnCashSalesPercentage" msprop:Generator_UserColumnName="CashSalesPercentage" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="NonCashSales" msprop:Generator_ColumnPropNameInRow="NonCashSales" msprop:Generator_ColumnPropNameInTable="NonCashSalesColumn" msprop:Generator_ColumnVarNameInTable="columnNonCashSales" msprop:Generator_UserColumnName="NonCashSales" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="NonCashSalesPercentage" msprop:Generator_ColumnPropNameInRow="NonCashSalesPercentage" msprop:Generator_ColumnPropNameInTable="NonCashSalesPercentageColumn" msprop:Generator_ColumnVarNameInTable="columnNonCashSalesPercentage" msprop:Generator_UserColumnName="NonCashSalesPercentage" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TotalSales" msprop:Generator_ColumnPropNameInRow="TotalSales" msprop:Generator_ColumnPropNameInTable="TotalSalesColumn" msprop:Generator_ColumnVarNameInTable="columnTotalSales" msprop:Generator_UserColumnName="TotalSales" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TotalSalesPercentage" msprop:Generator_ColumnPropNameInRow="TotalSalesPercentage" msprop:Generator_ColumnPropNameInTable="TotalSalesPercentageColumn" msprop:Generator_ColumnVarNameInTable="columnTotalSalesPercentage" msprop:Generator_UserColumnName="TotalSalesPercentage" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Date" msprop:Generator_ColumnPropNameInRow="Date" msprop:Generator_ColumnPropNameInTable="DateColumn" msprop:Generator_ColumnVarNameInTable="columnDate" msprop:Generator_UserColumnName="Date" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PayrollTax" msprop:Generator_ColumnPropNameInRow="PayrollTax" msprop:Generator_ColumnPropNameInTable="PayrollTaxColumn" msprop:Generator_ColumnVarNameInTable="columnPayrollTax" msprop:Generator_UserColumnName="PayrollTax" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Insurance" msprop:Generator_ColumnPropNameInRow="Insurance" msprop:Generator_ColumnPropNameInTable="InsuranceColumn" msprop:Generator_ColumnVarNameInTable="columnInsurance" msprop:Generator_UserColumnName="Insurance" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CardFee" msprop:Generator_ColumnPropNameInRow="CardFee" msprop:Generator_ColumnPropNameInTable="CardFeeColumn" msprop:Generator_ColumnVarNameInTable="columnCardFee" msprop:Generator_UserColumnName="CardFee" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Operator" msprop:Generator_ColumnPropNameInRow="Operator" msprop:Generator_ColumnPropNameInTable="OperatorColumn" msprop:Generator_ColumnVarNameInTable="columnOperator" msprop:Generator_UserColumnName="Operator" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TotalCost" msprop:Generator_ColumnPropNameInRow="TotalCost" msprop:Generator_ColumnPropNameInTable="TotalCostColumn" msprop:Generator_ColumnVarNameInTable="columnTotalCost" msprop:Generator_UserColumnName="TotalCost" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TotalCostPercentage" msprop:Generator_ColumnPropNameInRow="TotalCostPercentage" msprop:Generator_ColumnPropNameInTable="TotalCostPercentageColumn" msprop:Generator_ColumnVarNameInTable="columnTotalCostPercentage" msprop:Generator_UserColumnName="TotalCostPercentage" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TotalProfit" msprop:Generator_ColumnPropNameInRow="TotalProfit" msprop:Generator_ColumnPropNameInTable="TotalProfitColumn" msprop:Generator_ColumnVarNameInTable="columnTotalProfit" msprop:Generator_UserColumnName="TotalProfit" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TotalProfitPercentage" msprop:Generator_ColumnPropNameInRow="TotalProfitPercentage" msprop:Generator_ColumnPropNameInTable="TotalProfitPercentageColumn" msprop:Generator_ColumnVarNameInTable="columnTotalProfitPercentage" msprop:Generator_UserColumnName="TotalProfitPercentage" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="LabourModel" msprop:Generator_ColumnPropNameInRow="LabourModel" msprop:Generator_ColumnPropNameInTable="LabourModelColumn" msprop:Generator_ColumnVarNameInTable="columnLabourModel" msprop:Generator_UserColumnName="LabourModel" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CostofLabor" msprop:Generator_ColumnPropNameInRow="CostofLabor" msprop:Generator_ColumnPropNameInTable="CostofLaborColumn" msprop:Generator_ColumnVarNameInTable="columnCostofLabor" msprop:Generator_UserColumnName="CostofLabor" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="LabourPercentage" msprop:Generator_ColumnPropNameInRow="LabourPercentage" msprop:Generator_ColumnPropNameInTable="LabourPercentageColumn" msprop:Generator_ColumnVarNameInTable="columnLabourPercentage" msprop:Generator_UserColumnName="LabourPercentage" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TotalLabor" msprop:Generator_ColumnPropNameInRow="TotalLabor" msprop:Generator_ColumnPropNameInTable="TotalLaborColumn" msprop:Generator_ColumnVarNameInTable="columnTotalLabor" msprop:Generator_UserColumnName="TotalLabor" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SetInsurance" msprop:Generator_ColumnPropNameInRow="SetInsurance" msprop:Generator_ColumnPropNameInTable="SetInsuranceColumn" msprop:Generator_ColumnVarNameInTable="columnSetInsurance" msprop:Generator_UserColumnName="SetInsurance" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SetInsurancePercentage" msprop:Generator_ColumnPropNameInRow="SetInsurancePercentage" msprop:Generator_ColumnPropNameInTable="SetInsurancePercentageColumn" msprop:Generator_ColumnVarNameInTable="columnSetInsurancePercentage" msprop:Generator_UserColumnName="SetInsurancePercentage" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="GetInsurance" msprop:Generator_ColumnPropNameInRow="GetInsurance" msprop:Generator_ColumnPropNameInTable="GetInsuranceColumn" msprop:Generator_ColumnVarNameInTable="columnGetInsurance" msprop:Generator_UserColumnName="GetInsurance" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SetPayrollTax" msprop:Generator_ColumnPropNameInRow="SetPayrollTax" msprop:Generator_ColumnPropNameInTable="SetPayrollTaxColumn" msprop:Generator_ColumnVarNameInTable="columnSetPayrollTax" msprop:Generator_UserColumnName="SetPayrollTax" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PayrollTaxPercentage" msprop:Generator_ColumnPropNameInRow="PayrollTaxPercentage" msprop:Generator_ColumnPropNameInTable="PayrollTaxPercentageColumn" msprop:Generator_ColumnVarNameInTable="columnPayrollTaxPercentage" msprop:Generator_UserColumnName="PayrollTaxPercentage" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="GetPayroll" msprop:Generator_ColumnPropNameInRow="GetPayroll" msprop:Generator_ColumnPropNameInTable="GetPayrollColumn" msprop:Generator_ColumnVarNameInTable="columnGetPayroll" msprop:Generator_UserColumnName="GetPayroll" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OpEx" msprop:Generator_ColumnPropNameInRow="OpEx" msprop:Generator_ColumnPropNameInTable="OpExColumn" msprop:Generator_ColumnVarNameInTable="columnOpEx" msprop:Generator_UserColumnName="OpEx" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OpExPercentage" msprop:Generator_ColumnPropNameInRow="OpExPercentage" msprop:Generator_ColumnPropNameInTable="OpExPercentageColumn" msprop:Generator_ColumnVarNameInTable="columnOpExPercentage" msprop:Generator_UserColumnName="OpExPercentage" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SetCardFee" msprop:Generator_ColumnPropNameInRow="SetCardFee" msprop:Generator_ColumnPropNameInTable="SetCardFeeColumn" msprop:Generator_ColumnVarNameInTable="columnSetCardFee" msprop:Generator_UserColumnName="SetCardFee" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CardProcessingFee" msprop:Generator_ColumnPropNameInRow="CardProcessingFee" msprop:Generator_ColumnPropNameInTable="CardProcessingFeeColumn" msprop:Generator_ColumnVarNameInTable="columnCardProcessingFee" msprop:Generator_UserColumnName="CardProcessingFee" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CardProcessingFeePercentage" msprop:Generator_ColumnPropNameInRow="CardProcessingFeePercentage" msprop:Generator_ColumnPropNameInTable="CardProcessingFeePercentageColumn" msprop:Generator_ColumnVarNameInTable="columnCardProcessingFeePercentage" msprop:Generator_UserColumnName="CardProcessingFeePercentage" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TotalOpEx" msprop:Generator_ColumnPropNameInRow="TotalOpEx" msprop:Generator_ColumnPropNameInTable="TotalOpExColumn" msprop:Generator_ColumnVarNameInTable="columnTotalOpEx" msprop:Generator_UserColumnName="TotalOpEx" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TotalOpExPercentage" msprop:Generator_ColumnPropNameInRow="TotalOpExPercentage" msprop:Generator_ColumnPropNameInTable="TotalOpExPercentageColumn" msprop:Generator_ColumnVarNameInTable="columnTotalOpExPercentage" msprop:Generator_UserColumnName="TotalOpExPercentage" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Managed" msprop:Generator_ColumnPropNameInRow="Managed" msprop:Generator_ColumnPropNameInTable="ManagedColumn" msprop:Generator_ColumnVarNameInTable="columnManaged" msprop:Generator_UserColumnName="Managed" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ManagedPercentage" msprop:Generator_ColumnPropNameInRow="ManagedPercentage" msprop:Generator_ColumnPropNameInTable="ManagedPercentageColumn" msprop:Generator_ColumnVarNameInTable="columnManagedPercentage" msprop:Generator_UserColumnName="ManagedPercentage" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Owner" msprop:Generator_ColumnPropNameInRow="Owner" msprop:Generator_ColumnPropNameInTable="OwnerColumn" msprop:Generator_ColumnVarNameInTable="columnOwner" msprop:Generator_UserColumnName="Owner" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OwnerPercentage" msprop:Generator_ColumnPropNameInRow="OwnerPercentage" msprop:Generator_ColumnPropNameInTable="OwnerPercentageColumn" msprop:Generator_ColumnVarNameInTable="columnOwnerPercentage" msprop:Generator_UserColumnName="OwnerPercentage" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Notes" msprop:Generator_ColumnPropNameInRow="Notes" msprop:Generator_ColumnPropNameInTable="NotesColumn" msprop:Generator_ColumnVarNameInTable="columnNotes" msprop:Generator_UserColumnName="Notes" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CurrentDate" msprop:Generator_ColumnPropNameInRow="CurrentDate" msprop:Generator_ColumnPropNameInTable="CurrentDateColumn" msprop:Generator_ColumnVarNameInTable="columnCurrentDate" msprop:Generator_UserColumnName="CurrentDate" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

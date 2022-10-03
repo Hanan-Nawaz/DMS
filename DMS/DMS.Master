@@ -89,7 +89,13 @@
                             </button>
                             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
                                 <a class="dropdown-item" href="ProfitLoss.aspx">Profit and Loss Form</a>
-                                <a class="dropdown-item" href="ViewSalesVolumeData.aspx"> View Sales Volume Data</a>
+                                <a class="dropdown-item" href="ViewProfitLoss.aspx"> View Profit Loss</a>
+                                <a class="dropdown-item" href="ViewReports.aspx"> View Reports</a>
+                                <a class="dropdown-item" href="ViewGrossSalesModel.aspx"> View Gross Sales Model</a>
+                                <a class="dropdown-item" href="ViewCOGSItemName.aspx"> View COGS Item Name</a>
+                                <a class="dropdown-item" href="ViewLabourModel.aspx"> View Labour Model</a>
+                                <a class="dropdown-item" href="ViewLabourType.aspx"> View Labour Type</a>
+                                <a class="dropdown-item" href="ViewOpEXItemName.aspx"> View OpEx Item Name</a>
                             </div>
                         </div>
 
