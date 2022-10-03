@@ -94,6 +94,7 @@
   <ItemGroup>
     <Content Include="CSS\GirdView.css" />
     <Content Include="CSS\master.css" />
+    <Content Include="DMS.ico" />
     <Content Include="EditLabourData.aspx" />
     <Content Include="EditProfiLoss.aspx" />
     <Content Include="EditSalesVolumeData.aspx" />
