@@ -53,7 +53,6 @@ namespace DMS
                 tb_SD_DSO.Text = reader["daily_sale_ord"].ToString();
                 tb_SD_ASO.Text = reader["anum_sale_ord"].ToString();
                 tb_SD_date.Text = reader["sales_date"].ToString();
-                tb_SD_SaveDate.Text = reader["saved_date"].ToString();
                 ta_SD_Notes.Text = reader["sales_notes"].ToString();
                 if (Convert.ToDouble(tb_SD_AGR.Text.Replace(modified.NumberFormat.CurrencySymbol, "")) < 0)
                 {

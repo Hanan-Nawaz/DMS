@@ -17,6 +17,8 @@ namespace DMS
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            DateTime dateTime = DateTime.Now;
+            tb_LD_Date.Text = dateTime.ToString("d");
             if (!IsPostBack)
             {
                 Reload();
@@ -271,10 +273,41 @@ namespace DMS
             SqlCommand cmd;
             cmd = new SqlCommand(sqlStmt, con);
 
+            var original = new CultureInfo("en-us");
+
+            var modified = (CultureInfo)original.Clone();
+            modified.NumberFormat.CurrencyNegativePattern = 1;
+
+            double Start = Convert.ToDouble(tb_StartAGR.Text);
+            double End = Convert.ToDouble(tb_EndAGR.Text);
+
+            if ((Start - Math.Truncate(Start)) == .00)
+            {
+                tb_StartAGR.Text = Convert.ToString(Start);
+                tb_StartAGR.Text = string.Format(modified, "{0:c0}", double.Parse(tb_StartAGR.Text));
+            }
+            else
+            {
+                tb_StartAGR.Text = Convert.ToString(Start);
+                tb_StartAGR.Text = string.Format(modified, "{0:c2}", double.Parse(tb_StartAGR.Text));
+            }
+
+            if ((End - Math.Truncate(End)) == .00)
+            {
+                tb_EndAGR.Text = Convert.ToString(End);
+                tb_EndAGR.Text = string.Format(modified, "{0:c0}", double.Parse(tb_EndAGR.Text));
+            }
+            else
+            {
+                tb_EndAGR.Text = Convert.ToString(End);
+                tb_EndAGR.Text = string.Format(modified, "{0:c2}", double.Parse(tb_EndAGR.Text));
+            }
+
+            string AGR =  tb_StartAGR.Text + " - " + tb_EndAGR.Text;
 
             cmd.Parameters.Add(new SqlParameter("@annual_gross_revenue", SqlDbType.VarChar, 50));
            
-            cmd.Parameters["@annual_gross_revenue"].Value = tb_AGR.Text;
+            cmd.Parameters["@annual_gross_revenue"].Value = AGR;
             
             int i = cmd.ExecuteNonQuery();
 
@@ -288,8 +321,8 @@ namespace DMS
                 string script = "<script type=\"text/javascript\"> confirmError('" + this + "', '" + head + "', '" + headtext + "' , '" + headtype + "', '" + cancelmsg + "', '" + cancelHead + "' ); </script>";
                 ClientScript.RegisterClientScriptBlock(this.GetType(), "myscript", script);
                 Response.Redirect("LabourData.aspx");
-                tb_AGR.Text = "";
-
+                tb_EndAGR.Text = "";
+                tb_StartAGR.Text = "";
             }
             else
             {
@@ -685,54 +718,90 @@ namespace DMS
 
             //GM
 
+            int GM;
+
             if ((totalGM - Math.Truncate(totalGM)) == .00)
             {
                 tb_LDGM_W.Text = Convert.ToString(totalGM);
                 tb_LDGM_W.Text = string.Format(modified, "{0:c0}", double.Parse(tb_LDGM_W.Text));
             }
-            else
+            else if((totalGM - Math.Truncate(totalGM)) <= .50)
             {
-                tb_LDGM_W.Text = Convert.ToString(totalGM);
-                tb_LDGM_W.Text = string.Format(modified, "{0:c2}", double.Parse(tb_LDGM_W.Text));
+                GM = (int)Math.Floor(totalGM);
+                tb_LDGM_W.Text = Convert.ToString(GM);
+                tb_LDGM_W.Text = string.Format(modified, "{0:c0}", double.Parse(tb_LDGM_W.Text));
+            }
+            else if ((totalGM - Math.Truncate(totalGM)) >= .50)
+            {
+                GM = (int)Math.Ceiling(totalGM);
+                tb_LDGM_W.Text = Convert.ToString(GM);
+                tb_LDGM_W.Text = string.Format(modified, "{0:c0}", double.Parse(tb_LDGM_W.Text));
             }
 
             //AM
+
+            int AM;
 
             if ((totalAM - Math.Truncate(totalAM)) == .00)
             {
                 tb_LDAM_W.Text = Convert.ToString(totalAM);
                 tb_LDAM_W.Text = string.Format(modified, "{0:c0}", double.Parse(tb_LDAM_W.Text));
             }
-            else
+            else if((totalAM - Math.Truncate(totalAM)) <= .50)
             {
-                tb_LDAM_W.Text = Convert.ToString(totalAM);
-                tb_LDAM_W.Text = string.Format(modified, "{0:c2}", double.Parse(tb_LDAM_W.Text));
+                AM = (int)Math.Floor(totalAM);
+                tb_LDAM_W.Text = Convert.ToString(AM);
+                tb_LDAM_W.Text = string.Format(modified, "{0:c0}", double.Parse(tb_LDAM_W.Text));
+            }
+            else if ((totalAM - Math.Truncate(totalAM)) >= .50)
+            {
+                AM = (int)Math.Ceiling(totalAM);
+                tb_LDAM_W.Text = Convert.ToString(AM);
+                tb_LDAM_W.Text = string.Format(modified, "{0:c0}", double.Parse(tb_LDAM_W.Text));
             }
 
             //CREW
+
+            int CREW;
 
             if ((totalCREW - Math.Truncate(totalCREW)) == .00)
             {
                 tb_LDCREW_W.Text = Convert.ToString(totalCREW);
                 tb_LDCREW_W.Text = string.Format(modified, "{0:c0}", double.Parse(tb_LDCREW_W.Text));
             }
-            else
+            else if ((totalCREW - Math.Truncate(totalCREW)) <= .50)
             {
-                tb_LDCREW_W.Text = Convert.ToString(totalGM);
-                tb_LDCREW_W.Text = string.Format(modified, "{0:c2}", double.Parse(tb_LDCREW_W.Text));
+                CREW = (int)Math.Floor(totalCREW);
+                tb_LDCREW_W.Text = Convert.ToString(CREW);
+                tb_LDCREW_W.Text = string.Format(modified, "{0:c0}", double.Parse(tb_LDCREW_W.Text));
+            }
+            else if ((totalCREW - Math.Truncate(totalCREW)) >= .50)
+            {
+                CREW = (int)Math.Ceiling(totalCREW);
+                tb_LDCREW_W.Text = Convert.ToString(CREW);
+                tb_LDCREW_W.Text = string.Format(modified, "{0:c0}", double.Parse(tb_LDCREW_W.Text));
             }
 
             //Total
+
+            int TOTAL;
 
             if ((total - Math.Truncate(total)) == .00)
             {
                 tb_LD_TW.Text = Convert.ToString(total);
                 tb_LD_TW.Text = string.Format(modified, "{0:c0}", double.Parse(tb_LD_TW.Text));
             }
-            else
+            else if ((total - Math.Truncate(total)) <= .50)
             {
-                tb_LD_TW.Text = Convert.ToString(total);
-                tb_LD_TW.Text = string.Format(modified, "{0:c2}", double.Parse(tb_LD_TW.Text));
+                TOTAL = (int)Math.Floor(total); 
+                tb_LD_TW.Text = Convert.ToString(TOTAL);
+                tb_LD_TW.Text = string.Format(modified, "{0:c0}", double.Parse(tb_LD_TW.Text));
+            }
+            else if ((total - Math.Truncate(total)) <= .50)
+            {
+                TOTAL = (int)Math.Ceiling(total);
+                tb_LD_TW.Text = Convert.ToString(TOTAL);
+                tb_LD_TW.Text = string.Format(modified, "{0:c0}", double.Parse(tb_LD_TW.Text));
             }
 
         }
@@ -1021,6 +1090,11 @@ namespace DMS
             {
                 cn.Close();
             }
+        }
+
+        protected void Resetbn_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("LabourData.aspx");
         }
     }
 }

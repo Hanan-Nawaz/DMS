@@ -88,7 +88,7 @@
                     <div class="row">
                         <div class="col">
                             <center>
-                                <label style="color: blue; font-size: 20px; user-select: none;"><i class="fas fa-list fa-fw "></i>View Labour's Data </label>
+                                <label style="color: blue; font-size: 20px; user-select: none;"><i class="fas fa-list fa-fw "></i>View Labor's Data </label>
                             </center>
                         </div>
                     </div>
@@ -113,22 +113,21 @@
                                                 <asp:BoundField HeaderText="Daily Opearting Hours" DataField="daily_operating_hrs"></asp:BoundField>
                                                 <asp:BoundField HeaderText="Annual Opearting Hours" DataField="annual_operating_hrs"></asp:BoundField>
                                                 <asp:BoundField HeaderText="Model" DataField="model"></asp:BoundField>
-                                                <asp:BoundField HeaderText="Labour Data Date" DataField="labour_data_date"></asp:BoundField>
-                                                <asp:BoundField HeaderText="AM - No. of Labour" DataField="am_no_labor"></asp:BoundField>
+                                                <asp:BoundField HeaderText="AM - No. of Labor" DataField="am_no_labor"></asp:BoundField>
                                                 <asp:BoundField HeaderText="AM - Daily Hours Worked" DataField="am_daily_hrs_worked"></asp:BoundField>
                                                 <asp:BoundField HeaderText="AM - Annual Days Worked" DataField="am_annual_days_worked"></asp:BoundField>
                                                 <asp:BoundField HeaderText="AM - Hourly Wages" DataField="am_hourly_wages"></asp:BoundField>
                                                 <asp:BoundField HeaderText="AM - Annual Wages" DataField="am_annual_wages"></asp:BoundField>
-                                                <asp:BoundField HeaderText="CREW - No. of Labour" DataField="crew_no_labor"></asp:BoundField>
+                                                <asp:BoundField HeaderText="CREW - No. of Labor" DataField="crew_no_labor"></asp:BoundField>
                                                 <asp:BoundField HeaderText="CREW - Daily Hours Worked" DataField="crew_daily_hrs_worked"></asp:BoundField>
                                                 <asp:BoundField HeaderText="CREW - Annual Days Worked" DataField="crew_annual_days_worked"></asp:BoundField>
                                                 <asp:BoundField HeaderText="CREW - Hourly Wages" DataField="crew_hourly_wages"></asp:BoundField>
                                                 <asp:BoundField HeaderText="CREW - Annual Wages" DataField="crew_annual_wages"></asp:BoundField>
-                                                <asp:BoundField HeaderText="GM - No. og Labour" DataField="gm_no_labor"></asp:BoundField>
-                                                <asp:BoundField HeaderText="GM - Daily Hours Worked" DataField="gm_daily_hrs_worked"></asp:BoundField>
-                                                <asp:BoundField HeaderText="GM - Annual Days Worked" DataField="gm_annual_days_worked"></asp:BoundField>
-                                                <asp:BoundField HeaderText="GM - Hourly Wages" DataField="gm_hourly_wages"></asp:BoundField>
-                                                <asp:BoundField HeaderText="GM - Annual Wages" DataField="gm_annual_wages"></asp:BoundField>
+                                                <asp:BoundField HeaderText="MG - No. of Labor" DataField="gm_no_labor"></asp:BoundField>
+                                                <asp:BoundField HeaderText="MG - Daily Hours Worked" DataField="gm_daily_hrs_worked"></asp:BoundField>
+                                                <asp:BoundField HeaderText="MG - Annual Days Worked" DataField="gm_annual_days_worked"></asp:BoundField>
+                                                <asp:BoundField HeaderText="MG - Hourly Wages" DataField="gm_hourly_wages"></asp:BoundField>
+                                                <asp:BoundField HeaderText="MG - Annual Wages" DataField="gm_annual_wages"></asp:BoundField>
                                                 <asp:BoundField HeaderText="Total Annual Wages" DataField="total_annual_wages"></asp:BoundField>
                                                 <asp:BoundField HeaderText="Saved Date" DataField="saved_date"></asp:BoundField>
                                                 <asp:TemplateField>

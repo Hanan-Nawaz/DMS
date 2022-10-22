@@ -16,8 +16,6 @@ namespace DMS
     public partial class ProfitLoss : System.Web.UI.Page
     {
 
-
-
             double totalamount = 0;
             double totalamountLE = 0;
             double totalpercentage = 0;
@@ -32,6 +30,7 @@ namespace DMS
 
                     DateTime dateTime = DateTime.Today;
                     string date = dateTime.ToString("yyyyMMdd");
+                    tb_PL_Date.Text = dateTime.ToString("d");
                     long id = long.Parse(date);
                     long ID = id + 30;
                     IDCheck(ID);
@@ -2609,5 +2608,9 @@ namespace DMS
                 }
 
             }
+        protected void Resetbn_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("ProfitLoss.aspx");
         }
     }
+}

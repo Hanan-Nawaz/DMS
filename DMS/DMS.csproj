@@ -367,9 +367,15 @@
     <Content Include="ProfitLoss.rdlc">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <EmbeddedResource Include="CustomProfitLoss.rdlc" />
-    <EmbeddedResource Include="ReportLD.rdlc" />
-    <EmbeddedResource Include="SalesVolumeReport.rdlc" />
+    <Content Include="CustomProfitLoss.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ReportLD.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SalesVolumeReport.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

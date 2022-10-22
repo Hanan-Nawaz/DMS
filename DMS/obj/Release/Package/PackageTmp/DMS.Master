@@ -1,0 +1,148 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="DMS.master.cs" Inherits="DMS.DMS" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name='robots' content='max-image-preview:large' />
+    <link rel='dns-prefetch' href='//s.w.org' />
+    <link rel="shortcut icon" type="image/x-icon" href="DMS.ico" />
+    <link href='https://fonts.gstatic.com' rel='preconnect' />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+
+
+    <link rel="stylesheet" href="CSS/master.css" type="text/css" />
+
+
+
+
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.11.0/mdb.min.css" />
+    <script
+        type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.11.0/mdb.min.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+
+
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+
+
+    <link
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+        rel="stylesheet" />
+
+</head>
+<body>
+
+    <form id="form1" runat="server">
+
+        <aside>
+            <nav id="sidebarMenu" class="collapse d-lg-block sidebar  bg-white">
+                <div class="position-sticky">
+                    <div class="list-group list-group-flush mx-2 mt-4">
+
+                        <div class="dropdown">
+                            <button class="btn btn-primary dropdown-toggle text-center list-group-item list-group-item-action py-2 ripple" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                               <i class="fas fa-users"></i> Labour Data
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <a class="dropdown-item" href="LabourData.aspx"> Labour Data Form</a>
+                                <a class="dropdown-item" href="ViewLabourData.aspx"> View Labour Data</a>
+                                <a class="dropdown-item" href="ViewAnnualGrossRevenue.aspx">View Annual Gross Revenue</a>
+                                <a class="dropdown-item" href="ViewModel.aspx">View Model</a>
+                            </div>
+                        </div>
+
+                         <div class="dropdown mt-2">
+                            <button class="btn btn-primary dropdown-toggle text-center list-group-item list-group-item-action py-2 ripple" type="button" id="dropdownMenuButton1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                               <i class="fas fa-comment-dollar"></i> Sales Volume
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                <a class="dropdown-item" href="SalesVolumeData.aspx">Sales Volume Data Form</a>
+                                <a class="dropdown-item" href="ViewSalesVolumeData.aspx"> View Sales Volume Data</a>
+                            </div>
+                        </div>
+
+                        <div class="dropdown mt-2">
+                            <button class="btn btn-primary dropdown-toggle text-center list-group-item list-group-item-action py-2 ripple" type="button" id="dropdownMenuButton1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                               <i class="fas fa-newspaper"></i> Profit & Loss
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                <a class="dropdown-item" href="ProfitLoss.aspx">Profit and Loss Form</a>
+                                <a class="dropdown-item" href="ViewProfitLoss.aspx"> View Profit Loss</a>
+                                <a class="dropdown-item" href="ViewReports.aspx"> View Reports</a>
+                                <a class="dropdown-item" href="ViewGrossSalesModel.aspx"> View Gross Sales Model</a>
+                                <a class="dropdown-item" href="ViewCOGSItemName.aspx"> View COGS Item Name</a>
+                                <a class="dropdown-item" href="ViewLabourModel.aspx"> View Labour Model</a>
+                                <a class="dropdown-item" href="ViewLabourType.aspx"> View Labour Type</a>
+                                <a class="dropdown-item" href="ViewOpEXItemName.aspx"> View OpEx Item Name</a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </nav>
+
+            <nav id="main-navbar" class="navbar navbar-expand-lg navbar-light bg-white fixed-top">
+                <div class="container-fluid">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
+                        <i class="fas fa-bars"></i>
+                    </button>
+
+                    <a class="navbar-brand" href="LabourData.aspx">
+                        <h2 class="text-primary">DMS</h2>
+                    </a>
+
+
+
+                </div>
+            </nav>
+        </aside>
+
+        <main style="margin-top: 58px;">
+
+            <div class="container pt-4">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+        </main>
+
+    </form>
+
+
+
+    <footer class="site-footer">
+
+        <p class="copyright-text">
+            Copyright &copy;
+            <script>document.write(new Date().getFullYear())</script>
+            All Rights Reserved 
+        </p>
+
+    </footer>
+
+
+
+
+</body>
+</html>

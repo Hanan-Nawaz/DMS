@@ -52,6 +52,44 @@
 
             return false;
         };
+
+        function Error(stat) {
+
+            if (obj.status) {
+                return true;
+            }
+
+            swal({
+                title: "Warning",
+                text: "Do you Want to Reset?",
+                type: "warning",
+                showCancelButton: true,
+                closeOnConfirm: true,
+                closeOnCancel: false,
+                confirmButtonClass: "btn-danger",
+            },
+                function (isConfirm) {
+                    if (isConfirm) {
+                        obj.status = true;
+                        obj.ele = stat;
+                        obj.ele.click();
+
+                    }
+                    else {
+
+
+
+                        swal("Cancelled", "Form not Reseted", "error");
+
+
+                    }
+
+                });
+
+
+
+            return false;
+        };
     </script>
 
 </asp:Content>
@@ -66,7 +104,7 @@
                     <div class="row">
                         <div class="col">
                             <center>
-                                <label style="color: blue; font-size: 20px; user-select: none;"><i class="fas fa-pencil"></i>Edit Labour Data</label>
+                                <label style="color: blue; font-size: 20px; user-select: none;"><i class="fas fa-pencil"></i>Edit Labor Data</label>
                             </center>
                         </div>
                     </div>
@@ -77,7 +115,17 @@
                         </div>
                     </div>
 
-                    <div class="row">
+                    
+                    <div class="row mt-2">
+                        <div class="col-md-11"></div>
+                        <div class="col-md-1">
+                            <div class="form-group">
+                                <asp:LinkButton class="btn btn-danger text-white" runat="server" ID="Resetbn" OnClick="Resetbn_Click" OnClientClick="return Error(this);">Reset</asp:LinkButton>
+                            </div>
+                        </div>
+                    </div>
+
+                  <div class="row">
                         <div class="col-md-5">
                             <label>Annual Gross Renvenue</label>
                             <div class="form-group">
@@ -98,32 +146,8 @@
                                 </button>
                             </div>
                         </div>
-                        <div class="col-md-6">
-                            <label>Annual Operating Days</label>
-                            <div class="form-group">
-                                <asp:TextBox CssClass="form-control" ID="tb_LD_AOD" runat="server" TabIndex="2" TextMode="Number" placeholder="Annual Operating Days"></asp:TextBox>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="row">
-                        <div class="col-md-6">
-                            <label>Daily Opearting Hours</label>
-                            <div class="form-group">
-                                <asp:TextBox CssClass="form-control" ID="tb_LD_DOH" runat="server" TabIndex="3" AutoPostBack="true" OnTextChanged="tb_LD_DOH_TextChanged" TextMode="Number" placeholder="Daily Opearting Hours"></asp:TextBox>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <label>Annual Opearting Hours</label>
-                            <div class="form-group">
-                                <asp:TextBox CssClass="form-control" ID="tb_LD_AOH" runat="server" Enabled="false" placeholder=""></asp:TextBox>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="row">
                         <div class="col-md-5">
-                            <label>Model</label>
+                            <label>Labor Model</label>
                             <div class="form-group">
                                 <asp:UpdatePanel ID="UpdatePanel5" runat="server">
                                     <ContentTemplate>
@@ -144,20 +168,37 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-3">
-                            <label>Labour Data Date</label>
+                    </div>
+
+                    <div class="row">
+                         <div class="col-md-6">
+                            <label>Annual Operating Days</label>
                             <div class="form-group">
-                                <asp:TextBox CssClass="form-control" ID="tb_LD_Date" TextMode="Date" runat="server" TabIndex="5" placeholder=""></asp:TextBox>
+                                <asp:TextBox CssClass="form-control" ID="tb_LD_AOD" runat="server" TabIndex="2" TextMode="Number" placeholder="Annual Operating Days"></asp:TextBox>
                             </div>
                         </div>
-                         <div class="col-md-3">
-                            <label>Saved Date</label>
+                        <div class="col-md-6">
+                            <label>Annual Opearting Hours</label>
                             <div class="form-group">
-                                <asp:TextBox CssClass="form-control" ID="tb_saveDate" Enabled="false" runat="server" TabIndex="5" placeholder=""></asp:TextBox>
+                                <asp:TextBox CssClass="form-control" ID="tb_LD_AOH" runat="server" Enabled="false" placeholder=""></asp:TextBox>
                             </div>
                         </div>
                     </div>
 
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label>Daily Opearting Hours</label>
+                            <div class="form-group">
+                                <asp:TextBox CssClass="form-control" ID="tb_LD_DOH" runat="server" TabIndex="3" AutoPostBack="true" OnTextChanged="tb_LD_DOH_TextChanged" TextMode="Number" placeholder="Daily Opearting Hours"></asp:TextBox>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <label>Labor Data Date</label>
+                            <div class="form-group">
+                                <asp:TextBox CssClass="form-control" ID="tb_LD_Date" Enabled="false" runat="server" TabIndex="5" placeholder=""></asp:TextBox>
+                            </div>
+                        </div>
+                    </div>
                     <div class="row border border-bottom-1 border-primary">
                     </div>
 

@@ -136,48 +136,21 @@
 
             }
 
-            var rowCountLE = 0;
-            var gridViewLE = document.getElementById("<%=girdviewPLE.ClientID %>");
-            var rowsLE = gridViewLE.getElementsByTagName("tr")
-            for (var j = 0; j < rowsLE.length; j++) {
-                if (rowsLE[j].getElementsByTagName("td").length > 0) {
-                    rowCountLE++;
+            return false;
+        };
+            
+    </script>
+
+    <script>
+
+        var obj = { status: false, ele: null };
+            function ErrorOPEX(stat) {
+
+                if (obj.status) {
+                    return true;
                 }
-            }
-
-            if (rowCountLE > 1) {
-
-                swal({
-                    title: "Warning",
-                    text: "By closing You lost all Data you Entered. Are you Sure you want to close this PopUP? OtherWise Save it.",
-                    type: "warning",
-                    showCancelButton: true,
-                    closeOnConfirm: true,
-                    closeOnCancel: false,
-                    confirmButtonClass: "btn-danger",
-                },
-                    function (isConfirm) {
-                        if (isConfirm) {
-                            obj.status = true;
-                            obj.ele = stat;
-                            obj.ele.click();
-                        }
-                        else {
-                            swal("Cancelled", "Process cancelled :)", "error");
-                        }
-                    });
-            }
-            else {
-
-
-                obj.status = true;
-                obj.ele = stat;
-                obj.ele.click();
-
-            }
-
             var rowCountOpEx = 0;
-            var gridViewOpEx = document.getElementById("<%=girdviewPLE.ClientID %>");
+            var gridViewOpEx = document.getElementById("<%=GVOpEx.ClientID %>");
             var rowsOpEx = gridViewOpEx.getElementsByTagName("tr")
             for (var k = 0; k < rowsOpEx.length; k++) {
                 if (rowsOpEx[k].getElementsByTagName("td").length > 0) {
@@ -318,6 +291,44 @@
 
             return false;
         };
+
+        function Error(stat) {
+
+            if (obj.status) {
+                return true;
+            }
+
+            swal({
+                title: "Warning",
+                text: "Do you Want to Reset?",
+                type: "warning",
+                showCancelButton: true,
+                closeOnConfirm: true,
+                closeOnCancel: false,
+                confirmButtonClass: "btn-danger",
+            },
+                function (isConfirm) {
+                    if (isConfirm) {
+                        obj.status = true;
+                        obj.ele = stat;
+                        obj.ele.click();
+
+                    }
+                    else {
+
+
+
+                        swal("Cancelled", "Form not Reseted", "error");
+
+
+                    }
+
+                });
+
+
+
+            return false;
+        };
     </script>
 
 </asp:Content>
@@ -344,22 +355,24 @@
                     </div>
 
                     <div class="row mt-2">
-                        <div class="col-md-11">
-                           
-                        </div>
-                        
+                        <div class="col-md-11"></div>
                         <div class="col-md-1">
-                            <label></label>
                             <div class="form-group">
-                                <a class="btn btn-danger text-white" runat="server" style="margin-top: 8px;" href="ProfitLoss.aspx">Reset</a>
+                                <asp:LinkButton class="btn btn-danger text-white" runat="server" ID="Resetbn" OnClick="Resetbn_Click" OnClientClick="return Error(this);">Reset</asp:LinkButton>
                             </div>
                         </div>
                     </div>
 
+
                     <div class="row">
                         <label class="font-weight-bold">Sales Revenue</label>
-
-                        <div class="col-md-5">
+                        <div class="col-md-6">
+                            <label>Gross Sales</label>
+                            <div class="form-group">
+                                <asp:TextBox CssClass="form-control" ID="tb_PL_GrossSales" AutoPostBack="true" TabIndex="3" runat="server" placeholder="Gross Sales" OnTextChanged="tb_PL_GrossSales_TextChanged"></asp:TextBox>
+                            </div>
+                        </div>
+                         <div class="col-md-5">
                             <label>Model</label>
                             <div class="form-group">
                                 <asp:UpdatePanel ID="UpdatePanel5" runat="server">
@@ -371,6 +384,7 @@
                                 </asp:UpdatePanel>
                             </div>
                         </div>
+                        
                         <div class="col-md-1">
                             <label></label>
                             <div class="form-group">
@@ -379,12 +393,6 @@
                                         +
                                     </button>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <label>Gross Sales</label>
-                            <div class="form-group">
-                                <asp:TextBox CssClass="form-control" ID="tb_PL_GrossSales" AutoPostBack="true" TabIndex="3" runat="server" placeholder="Gross Sales" OnTextChanged="tb_PL_GrossSales_TextChanged"></asp:TextBox>
                             </div>
                         </div>
                     </div>
@@ -450,19 +458,15 @@
                         <div class="col-md-6">
                             <label>Data Date</label>
                             <div class="form-group">
-                                <asp:TextBox CssClass="form-control" ID="tb_PL_Date" TextMode="Date" runat="server" TabIndex="6" placeholder=""></asp:TextBox>
+                                <asp:TextBox CssClass="form-control" ID="tb_PL_Date" Enabled="false" runat="server" TabIndex="6" placeholder=""></asp:TextBox>
                             </div>
                         </div>
-                        <div class="col-md-3">
-                            <div class="form-group">
-                                <asp:TextBox CssClass="form-control" Visible="false" ID="tb_PL_id" runat="server" ReadOnly="true"></asp:TextBox>
-                            </div>
-                        </div>
-                        <div class="col-md-2">
+                        <div class="col-md-6">
                             <label></label>
+                                <asp:TextBox CssClass="form-control" Visible="false" ID="tb_PL_id" runat="server" ReadOnly="true" Height="0"></asp:TextBox>
                             <div class="form-group">
-                                <button type="button" class="btn btn-primary" style="margin-top: 8px;" TabIndex="7" data-toggle="modal" data-target="#Values">
-                                    Add Values
+                                <button type="button" class="btn btn-primary" style="margin-top: 8px; width: 100%;" TabIndex="7" data-toggle="modal" data-target="#Values">
+                                    Add Card Fee / Payroll Tax / Opeator / Insurance
                                 </button>
                             </div>
                         </div>
@@ -476,7 +480,7 @@
                             <label></label>
                             <div class="form-group">
                                 <div class="form-group">
-                                    <button type="button" class="btn btn-primary" style="margin-top: 8px; TabIndex="8"  width: 100%;" data-toggle="modal" data-target="#COGS">
+                                    <button type="button" class="btn btn-primary" style="margin-top: 8px; width: 100%;" TabIndex="8"  Width="100%" data-toggle="modal" data-target="#COGS">
                                         Add Cost of Goods Sold
                                     </button>
                                 </div>
@@ -553,7 +557,7 @@
                             <label></label>
                             <div class="form-group">
                                 <div class="form-group">
-                                    <button type="button" class="btn btn-primary" style="margin-top: 8px; TabIndex="11" width: 100%;" data-toggle="modal" data-target="#COL">
+                                    <button type="button" class="btn btn-primary" style="margin-top: 8px; width: 100%" TabIndex="11" Width: "100%" data-toggle="modal" data-target="#COL">
                                         Add Cost of Labour
                                     </button>
                                 </div>
@@ -610,19 +614,18 @@
 
                     </div>
 
-                    <div class="row mt-3">
-
+                    <div class="row">
                         <div class="col-md-6">
-                            <label>Add Insurance</label>
+                            <label>View Insurance % You Added</label>
                             <div class="form-group">
                                 <asp:UpdatePanel ID="UpdatePanel4" runat="server">
                                     <ContentTemplate>
                                         <asp:TextBox CssClass="form-control" AutoPostBack="true" ID="tbGetInsurance" runat="server" ReadOnly="true"></asp:TextBox>
                                     </ContentTemplate>
-
                                 </asp:UpdatePanel>
                             </div>
                         </div>
+                         
 
                     </div>
 
@@ -644,11 +647,12 @@
                             </div>
                         </div>
                         <div class="col-md-6">
-                            <label>Payroll Tax %</label>
+                            <label>Payroll Tax % You Added</label>
                             <div class="form-group">
                                 <asp:TextBox CssClass="form-control" ID="tbGetPayrollTax" runat="server" ReadOnly="true"></asp:TextBox>
                             </div>
                         </div>
+                        
                     </div>
 
                     <div class="row border border-bottom-1 border-primary">
@@ -688,11 +692,12 @@
                         <label class="font-weight-bold">Card Processing Fee</label>
                        
                         <div class="col-md-6">
-                            <label>Card Fee</label>
+                            <label>Card Fee % You Added</label>
                             <div class="form-group">
                                 <asp:TextBox CssClass="form-control" ID="tbCardProcessingFee" runat="server" ReadOnly="true"></asp:TextBox>
                             </div>
                         </div>
+                         
                     </div>
 
                     <div class="row">
@@ -785,7 +790,7 @@
                         <div class="col-4 mx-auto">
                             <center>
                                 <div class="form-group">
-                                    <asp:Button class="btn btn-primary btn-block btn-lg" TabIndex="14" ID="btn_PL_Calculate"  runat="server" Text="Analyze" OnClick="btn_PL_Calculate_Click" />
+                                    <asp:Button class="btn btn-primary btn-block btn-lg" TabIndex="14" ID="btn_PL_Calculate"  runat="server" Text="Run" OnClick="btn_PL_Calculate_Click" />
                                 </div>
                             </center>
                         </div>
@@ -795,7 +800,7 @@
                         <div class="col-4 mx-auto">
                             <center>
                                 <div class="form-group">
-                                    <asp:Button class="btn btn-primary btn-block btn-lg" TabIndex="15" ID="btn_Save_toDB" runat="server" Text="Save to DB" OnClick="btn_Save_toDB_Click" />
+                                    <asp:Button class="btn btn-primary btn-block btn-lg" TabIndex="15" ID="btn_Save_toDB" runat="server" Text="Save" OnClick="btn_Save_toDB_Click" />
                                 </div>
                             </center>
                         </div>
@@ -812,7 +817,10 @@
             <div class="modal-dialog modal-dialog-centered" role="document">
                 <div class="modal-content">
                     <div class="modal-header border-bottom-0">
-                        <h5 class="modal-title" id="exampleModalLabel09">Add Values</h5>
+                        <h class="modal-title" id="exampleModalLabel09">Add Card Fee / Insurance / Operator / Payroll Tax</h>
+                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
                     </div>
                     <div class="row m-1">
                         <div class="col-md">
@@ -830,7 +838,6 @@
                                     <ContentTemplate>
                                 <asp:TextBox CssClass="form-control" ID="tbInsuranceExp" runat="server" placeholder="Insurance"></asp:TextBox>
                                     </ContentTemplate>
-
                                 </asp:UpdatePanel>
                             </div>
                         </div>
@@ -920,8 +927,21 @@
                 <div class="modal-content">
                     <div class="modal-header border-bottom-0">
                         <h5 class="modal-title" id="exampleModalLabel73">Add Operating Expense</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
                     </div>
                     <div class="row m-1">
+                          <div class="col-md-1">
+                            <label></label>
+                            <div class="form-group">
+                                <div class="form-group">
+                                    <button type="button" class="btn btn-primary" style="margin-top: 8px;" data-toggle="modal" data-target="#OpExItemName">
+                                        +
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
                         <div class="col-md-5">
                             <label>Item Name</label>
                             <div class="form-group">
@@ -934,16 +954,7 @@
                                 </asp:UpdatePanel>
                             </div>
                         </div>
-                        <div class="col-md-1">
-                            <label></label>
-                            <div class="form-group">
-                                <div class="form-group">
-                                    <button type="button" class="btn btn-primary" style="margin-top: 8px;" data-toggle="modal" data-target="#OpExItemName">
-                                        +
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
+                      
                         <div class="col-md-6">
                             <label>Item Cost</label>
                             <div class="form-group">
@@ -1002,20 +1013,20 @@
                     </div>
 
                     <div class="row m-1  border border-bottom-0 border-left-0 border-right-0 border-secondary">
-                        <div class="col-md-6"></div>
+                        <div class="col-md-4"></div>
                         <div class="col-md-2 mt-3">
                             <center>
                                 <div class="form-group">
-                                    <asp:LinkButton runat="server" CssClass="btn btn-danger" ID="btnCloseOpEx" OnClientClick="return VerifyError(this);" OnClick="btnCloseOpEx_Click">
-                                          Close 
+                                    <asp:LinkButton runat="server" CssClass="btn btn-danger" ID="btnCloseOpEx" OnClientClick="return ErrorOPEX(this);" OnClick="btnCloseOpEx_Click">
+                                          Reset 
                                     </asp:LinkButton>
                                 </div>
                             </center>
                         </div>
-                        <div class="col-md-4 mt-3">
+                        <div class="col-md-6 mt-3">
                             <center>
                                 <div class="form-group">
-                                    <asp:Button class="btn btn-primary btn-block btn-md" ID="btnSaveOpEx" runat="server" OnClientClick="return CheckError(this,Are you sure you want to Save?);" Text="Save" OnClick="btnSaveOpEx_Click" />
+                                    <asp:Button class="btn btn-primary btn-block btn-md" ID="btnSaveOpEx" runat="server" OnClientClick="return CheckError(this,Are you sure you want to Save?);" Text="Save and Close" OnClick="btnSaveOpEx_Click" />
                                 </div>
                             </center>
                         </div>
@@ -1073,8 +1084,21 @@
                 <div class="modal-content">
                     <div class="modal-header border-bottom-0">
                         <h5 class="modal-title" id="exampleModalLabel3">Add Cost of Goods Sold</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
                     </div>
                     <div class="row m-1">
+                          <div class="col-md-1">
+                            <label></label>
+                            <div class="form-group">
+                                <div class="form-group">
+                                    <button type="button" class="btn btn-primary" style="margin-top: 8px;" data-toggle="modal" data-target="#ItemName">
+                                        +
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
                         <div class="col-md-5">
                             <label>Item Name</label>
                             <div class="form-group">
@@ -1087,16 +1111,7 @@
                                 </asp:UpdatePanel>
                             </div>
                         </div>
-                        <div class="col-md-1">
-                            <label></label>
-                            <div class="form-group">
-                                <div class="form-group">
-                                    <button type="button" class="btn btn-primary" style="margin-top: 8px;" data-toggle="modal" data-target="#ItemName">
-                                        +
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
+                      
                         <div class="col-md-6">
                             <label>Item Cost</label>
                             <div class="form-group">
@@ -1155,20 +1170,20 @@
                     </div>
 
                     <div class="row m-1  border border-bottom-0 border-left-0 border-right-0 border-secondary">
-                        <div class="col-md-6"></div>
+                        <div class="col-md-4"></div>
                         <div class="col-md-2 mt-3">
                             <center>
                                 <div class="form-group">
                                     <asp:LinkButton runat="server" CssClass="btn btn-danger" ID="btn_del_all_COGS" OnClientClick="return VerifyError(this);" OnClick="btn_del_all_COGS_Click">
-                                          Close 
+                                          Reset 
                                     </asp:LinkButton>
                                 </div>
                             </center>
                         </div>
-                        <div class="col-md-4 mt-3">
+                        <div class="col-md-6 mt-3">
                             <center>
                                 <div class="form-group">
-                                    <asp:Button class="btn btn-primary btn-block btn-md" ID="btn_save" runat="server" OnClientClick="return CheckError(this,Are you sure you want to Save?);" Text="Save" OnClick="btn_save_Click" />
+                                    <asp:Button class="btn btn-primary btn-block btn-md" ID="btn_save" runat="server" OnClientClick="return CheckError(this,Are you sure you want to Save?);" Text="Save and Close" OnClick="btn_save_Click" />
                                 </div>
                             </center>
                         </div>
@@ -1266,10 +1281,24 @@
         <div class="modal fade" id="COL" tabindex="1" role="dialog" data-backdrop="static" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered" role="document">
                 <div class="modal-content">
+
                     <div class="modal-header border-bottom-0">
                         <h5 class="modal-title" id="exampleModalLabel7">Add Cost of Labour</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
                     </div>
                     <div class="row m-1">
+                        <div class="col-md-1">
+                            <label></label>
+                            <div class="form-group">
+                                <div class="form-group">
+                                    <button type="button" class="btn btn-primary" style="margin-top: 8px;" data-toggle="modal" data-target="#LabourType">
+                                        +
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
                         <div class="col-md-5">
                             <label>Labour Type</label>
                             <div class="form-group">
@@ -1282,16 +1311,7 @@
                                 </asp:UpdatePanel>
                             </div>
                         </div>
-                        <div class="col-md-1">
-                            <label></label>
-                            <div class="form-group">
-                                <div class="form-group">
-                                    <button type="button" class="btn btn-primary" style="margin-top: 8px;" data-toggle="modal" data-target="#LabourType">
-                                        +
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
+                        
                         <div class="col-md-6">
                             <label>Labour Cost</label>
                             <div class="form-group">
@@ -1350,20 +1370,20 @@
                     </div>
 
                     <div class="row m-1  border border-bottom-0 border-left-0 border-right-0 border-secondary">
-                        <div class="col-md-6"></div>
+                        <div class="col-md-4"></div>
                         <div class="col-md-2 mt-3">
                             <center>
                                 <div class="form-group">
                                     <asp:LinkButton runat="server" CssClass="btn btn-danger" ID="btn_Close_COL" OnClientClick="return VerifyErrorLE(this);" OnClick="btn_Close_COL_Click">
-                                          Close 
+                                          Reset 
                                     </asp:LinkButton>
                                 </div>
                             </center>
                         </div>
-                        <div class="col-md-4 mt-3">
+                        <div class="col-md-6 mt-3">
                             <center>
                                 <div class="form-group">
-                                    <asp:Button class="btn btn-primary btn-block btn-md" ID="btn_COL_Save" runat="server" OnClientClick="return CheckError(this,Are you sure you want to Save?);" Text="Save" OnClick="btn_COL_Save_Click" />
+                                    <asp:Button class="btn btn-primary btn-block btn-md" ID="btn_COL_Save" runat="server" OnClientClick="return CheckError(this,Are you sure you want to Save?);" Text="Save and Close" OnClick="btn_COL_Save_Click" />
                                 </div>
                             </center>
                         </div>

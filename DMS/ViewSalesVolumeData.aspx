@@ -117,7 +117,6 @@
                                                 <asp:BoundField HeaderText="Daily Sales Order" DataField="daily_sale_ord"></asp:BoundField>
                                                 <asp:BoundField HeaderText="Annual Sales Order" DataField="anum_sale_ord"></asp:BoundField>
                                                 <asp:BoundField HeaderText="Saved Date" DataField="saved_date"></asp:BoundField>
-                                                <asp:BoundField HeaderText="Sales Data Date" DataField="sales_date"></asp:BoundField>
                                                 <asp:TemplateField>
                                                     <ItemTemplate>
                                                         <div>

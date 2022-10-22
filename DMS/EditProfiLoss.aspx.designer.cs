@@ -24,6 +24,24 @@ namespace DMS
         protected global::System.Web.UI.ScriptManager ScriptManager1;
 
         /// <summary>
+        /// Resetbn control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton Resetbn;
+
+        /// <summary>
+        /// tb_PL_GrossSales control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox tb_PL_GrossSales;
+
+        /// <summary>
         /// UpdatePanel5 control.
         /// </summary>
         /// <remarks>
@@ -40,15 +58,6 @@ namespace DMS
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList ddl_PL_Model;
-
-        /// <summary>
-        /// tb_PL_GrossSales control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tb_PL_GrossSales;
 
         /// <summary>
         /// tb_PL_CashSales control.

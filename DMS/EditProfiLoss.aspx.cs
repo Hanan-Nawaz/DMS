@@ -2653,5 +2653,11 @@ namespace DMS
             }
 
         }
+
+        protected void Resetbn_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("EditProfitLoss.aspx");
+        }
+
     }
 }

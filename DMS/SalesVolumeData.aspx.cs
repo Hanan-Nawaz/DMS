@@ -17,7 +17,8 @@ namespace DMS
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            DateTime date = DateTime.Today;
+            tb_SD_date.Text = date.ToString("d");
         }
 
         protected void tb_SD_AGR_TextChanged(object sender, EventArgs e)
@@ -30,6 +31,7 @@ namespace DMS
                 if (CheckInt(tb_SD_AGR.Text) == true)
                 {
                     double Annual_GR = Convert.ToDouble(tb_SD_AGR.Text);
+                    int AnnualgR;
                 if (Annual_GR < 0)
                 {
                     tb_SD_AGR.ForeColor = Color.Red;
@@ -44,11 +46,18 @@ namespace DMS
                     tb_SD_AGR.Text = Convert.ToString(Annual_GR);
                     tb_SD_AGR.Text = string.Format(modified, "{0:c0}", double.Parse(tb_SD_AGR.Text));
                     }
-                    else
-                    {
-                    tb_SD_AGR.Text = Convert.ToString(Annual_GR);
-                    tb_SD_AGR.Text = string.Format(modified, "{0:c2}", double.Parse(tb_SD_AGR.Text));
-                    }
+                else if ((Annual_GR - Math.Truncate(Annual_GR)) <= .50)
+                {
+                    AnnualgR = (int)Math.Floor(Annual_GR);
+                    tb_SD_AGR.Text = Convert.ToString(AnnualgR);
+                    tb_SD_AGR.Text = string.Format(modified, "{0:c0}", double.Parse(tb_SD_AGR.Text));
+                }
+                else if ((Annual_GR - Math.Truncate(Annual_GR)) >= .50)
+                {
+                    AnnualgR = (int)Math.Ceiling(Annual_GR);
+                    tb_SD_AGR.Text = Convert.ToString(AnnualgR);
+                    tb_SD_AGR.Text = string.Format(modified, "{0:c0}", double.Parse(tb_SD_AGR.Text));
+                }
             }
                 else
                 {
@@ -135,6 +144,7 @@ namespace DMS
             if (CheckInt(tb_SD_ASr.Text) == true)
             {
                 double Average_SR = Convert.ToDouble(tb_SD_ASr.Text);
+                int AveragesR;
                 if (Average_SR < 0)
                 {
                     tb_SD_ASr.ForeColor = Color.Red;
@@ -149,10 +159,17 @@ namespace DMS
                     tb_SD_ASr.Text = Convert.ToString(Average_SR);
                     tb_SD_ASr.Text = string.Format(modified, "{0:c0}", double.Parse(tb_SD_ASr.Text));
                 }
-                else
+               else if ((Average_SR - Math.Truncate(Average_SR)) <= .50)
                 {
-                    tb_SD_ASr.Text = Convert.ToString(Average_SR);
-                    tb_SD_ASr.Text = string.Format(modified, "{0:c2}", double.Parse(tb_SD_ASr.Text));
+                    AveragesR = (int)Math.Floor(Average_SR);
+                    tb_SD_ASr.Text = Convert.ToString(AveragesR);
+                    tb_SD_ASr.Text = string.Format(modified, "{0:c0}", double.Parse(tb_SD_ASr.Text));
+                }
+                else if ((Average_SR - Math.Truncate(Average_SR)) >= .50)
+                {
+                    AveragesR = (int)Math.Ceiling(Average_SR);
+                    tb_SD_ASr.Text = Convert.ToString(AveragesR);
+                    tb_SD_ASr.Text = string.Format(modified, "{0:c0}", double.Parse(tb_SD_ASr.Text));
                 }
             }
             else
@@ -193,8 +210,9 @@ namespace DMS
             double Avg_Sale_Recipt = Convert.ToDouble(tb_SD_ASr.Text.Replace(modified.NumberFormat.CurrencySymbol, ""));
 
             double Daily_Gross_Revenue = Annual_Gross_Revenue / Annual_Op_Days;
-            
-            if(Daily_Gross_Revenue < 0)
+            int DailyGrossrevenue;
+
+            if (Daily_Gross_Revenue < 0)
             {
                 tb_SD_DGR.ForeColor = Color.Red;
             }
@@ -208,13 +226,23 @@ namespace DMS
                 tb_SD_DGR.Text = Convert.ToString(Daily_Gross_Revenue);
                 tb_SD_DGR.Text = string.Format(modified, "{0:c0}", double.Parse(tb_SD_DGR.Text));
             }
-            else
+            else if(Daily_Gross_Revenue - Math.Truncate(Daily_Gross_Revenue) <= .50)
             {
-                tb_SD_DGR.Text = Convert.ToString(Daily_Gross_Revenue);
-                tb_SD_DGR.Text = string.Format(modified, "{0:c2}", double.Parse(tb_SD_DGR.Text));
+                DailyGrossrevenue = (int)Math.Floor(Daily_Gross_Revenue);
+                tb_SD_DGR.Text = Convert.ToString(DailyGrossrevenue);
+                tb_SD_DGR.Text = string.Format(modified, "{0:c0}", double.Parse(tb_SD_DGR.Text));
+            }
+            else if (Daily_Gross_Revenue - Math.Truncate(Daily_Gross_Revenue) >= .50)
+            {
+                DailyGrossrevenue = (int)Math.Ceiling(Daily_Gross_Revenue);
+                tb_SD_DGR.Text = Convert.ToString(DailyGrossrevenue);
+                tb_SD_DGR.Text = string.Format(modified, "{0:c0}", double.Parse(tb_SD_DGR.Text));
             }
 
-            double Houly_Gross_Revenue = Daily_Gross_Revenue / Daily_Op_Hours;
+            double DailyGrossRevenue = Convert.ToDouble(tb_SD_DGR.Text.Replace(modified.NumberFormat.CurrencySymbol, ""));
+
+            double Houly_Gross_Revenue = DailyGrossRevenue / Daily_Op_Hours;
+            int Houly_Grossrevenue;
 
             if (Houly_Gross_Revenue < 0)
             {
@@ -230,13 +258,22 @@ namespace DMS
                 tb_SD_HGR.Text = Convert.ToString(Houly_Gross_Revenue);
                 tb_SD_HGR.Text = string.Format(modified, "{0:c0}", double.Parse(tb_SD_HGR.Text));
             }
-            else
+            else if (Houly_Gross_Revenue - Math.Truncate(Houly_Gross_Revenue) <= .50)
             {
-                tb_SD_HGR.Text = Convert.ToString(Houly_Gross_Revenue);
-                tb_SD_HGR.Text = string.Format(modified, "{0:c2}", double.Parse(tb_SD_HGR.Text));
+                Houly_Grossrevenue = (int)Math.Floor(Houly_Gross_Revenue);
+                tb_SD_HGR.Text = Convert.ToString(Houly_Grossrevenue);
+                tb_SD_HGR.Text = string.Format(modified, "{0:c0}", double.Parse(tb_SD_HGR.Text));
+            }
+            else if (Houly_Gross_Revenue - Math.Truncate(Houly_Gross_Revenue) >= .50)
+            {
+                Houly_Grossrevenue = (int)Math.Ceiling(Houly_Gross_Revenue);
+                tb_SD_HGR.Text = Convert.ToString(Houly_Grossrevenue + 1);
+                tb_SD_HGR.Text = string.Format(modified, "{0:c0}", double.Parse(tb_SD_HGR.Text));
             }
 
-            double Hourly_sale_order = Houly_Gross_Revenue / Avg_Sale_Recipt;
+            double HoulyGrossRevenue = Convert.ToDouble(tb_SD_HGR.Text.Replace(modified.NumberFormat.CurrencySymbol, ""));
+            double Hourly_sale_order = HoulyGrossRevenue / Avg_Sale_Recipt;
+            int Hourly_saleOrder;
 
             if (Hourly_sale_order < 0)
             {
@@ -252,14 +289,22 @@ namespace DMS
                 tb_SD_HSO.Text = Convert.ToString(Hourly_sale_order);
                 tb_SD_HSO.Text = string.Format("{0:n0}", double.Parse(tb_SD_HSO.Text));
             }
-            else
+            else if(Hourly_sale_order - Math.Truncate(Hourly_sale_order) <= .50)
             {
-                tb_SD_HSO.Text = Convert.ToString(Hourly_sale_order);
-                tb_SD_HSO.Text = string.Format("{0:n2}", double.Parse(tb_SD_HSO.Text));
-
+                Hourly_saleOrder = (int)Math.Floor(Hourly_sale_order);
+                tb_SD_HSO.Text = Convert.ToString(Hourly_saleOrder);
+                tb_SD_HSO.Text = string.Format("{0:n0}", double.Parse(tb_SD_HSO.Text));
+            }
+            else if (Hourly_sale_order - Math.Truncate(Hourly_sale_order) >= .50)
+            {
+                Hourly_saleOrder = (int)Math.Ceiling(Hourly_sale_order);
+                tb_SD_HSO.Text = Convert.ToString(Hourly_saleOrder);
+                tb_SD_HSO.Text = string.Format("{0:n0}", double.Parse(tb_SD_HSO.Text));
             }
 
-            double Daily_Sales_Order = Hourly_sale_order * Daily_Op_Hours;
+            double Hourlysaleorder = Convert.ToDouble(tb_SD_HSO.Text);
+            double Daily_Sales_Order = Hourlysaleorder * Daily_Op_Hours;
+            int DailySalesorder;
 
             if (Daily_Sales_Order < 0)
             {
@@ -275,13 +320,22 @@ namespace DMS
                 tb_SD_DSO.Text = Convert.ToString(Daily_Sales_Order);
                 tb_SD_DSO.Text = string.Format("{0:n0}", double.Parse(tb_SD_DSO.Text));
             }
-            else
+            else if(Daily_Sales_Order - Math.Truncate(Daily_Sales_Order) <= .50)
             {
-                tb_SD_DSO.Text = Convert.ToString(Daily_Sales_Order);
-                tb_SD_DSO.Text = string.Format("{0:n2}", double.Parse(tb_SD_DSO.Text));
+                DailySalesorder = (int)Math.Floor(Daily_Sales_Order);
+                tb_SD_DSO.Text = Convert.ToString(DailySalesorder);
+                tb_SD_DSO.Text = string.Format("{0:n0}", double.Parse(tb_SD_DSO.Text));
+            }
+            else if (Daily_Sales_Order - Math.Truncate(Daily_Sales_Order) <= .50)
+            {
+                DailySalesorder = (int)Math.Ceiling(Daily_Sales_Order);
+                tb_SD_DSO.Text = Convert.ToString(DailySalesorder);
+                tb_SD_DSO.Text = string.Format("{0:n0}", double.Parse(tb_SD_DSO.Text));
             }
 
-            double Annual_sales_Order = Daily_Sales_Order * Annual_Op_Days;
+            double DailySalesOrder = Convert.ToDouble(tb_SD_DSO.Text);
+            double Annual_sales_Order = DailySalesOrder * Annual_Op_Days;
+            int Annual_salesorder;
 
             if (Annual_sales_Order < 0)
             {
@@ -298,12 +352,20 @@ namespace DMS
                 tb_SD_ASO.Text = string.Format("{0:n0}", double.Parse(tb_SD_ASO.Text));
 
             }
-            else
+            else if (Annual_sales_Order - Math.Truncate(Annual_sales_Order) <= .50)
             {
-                tb_SD_ASO.Text = Convert.ToString(Annual_sales_Order);
-                tb_SD_ASO.Text = string.Format("{0:n2}", double.Parse(tb_SD_ASO.Text));
-            }
+                Annual_salesorder = (int)Math.Floor(Annual_sales_Order);
+                tb_SD_ASO.Text = Convert.ToString(Annual_salesorder);
+                tb_SD_ASO.Text = string.Format("{0:n0}", double.Parse(tb_SD_ASO.Text));
 
+            }
+            else if (Annual_sales_Order - Math.Truncate(Annual_sales_Order) >= .50)
+            {
+                Annual_salesorder = (int)Math.Ceiling(Annual_sales_Order);
+                tb_SD_ASO.Text = Convert.ToString(Annual_salesorder);
+                tb_SD_ASO.Text = string.Format("{0:n0}", double.Parse(tb_SD_ASO.Text));
+
+            }
         }
 
         void Report()
@@ -372,7 +434,7 @@ namespace DMS
                 cmd.Parameters["@hourly_sale_ord"].Value = tb_SD_HSO.Text;
                 cmd.Parameters["@daily_sale_ord"].Value = tb_SD_DSO.Text;
                 cmd.Parameters["@anum_sale_ord"].Value = tb_SD_ASO.Text;
-                cmd.Parameters["@sales_date"].Value = tb_SD_date.Text;
+                cmd.Parameters["@sales_date"].Value = date.ToString("d");
                 cmd.Parameters["@saved_date"].Value = date.ToString("d");
 
                 
@@ -389,7 +451,7 @@ namespace DMS
 
                 if (i > 0)
                 {
-                     ClientScript.RegisterClientScriptBlock(this.GetType(), "k", "swal('congratulations', 'Sales Volume Data Inserted to DB Succesfully :)', 'success')", true);
+                     ClientScript.RegisterClientScriptBlock(this.GetType(), "k", "swal('Congratulations', 'Sales Volume Data Saved', 'success')", true);
                 }
                 else
                 {
@@ -408,5 +470,9 @@ namespace DMS
             }
         }
 
+        protected void Resetbn_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("SalesVolumeData.aspx");
+        }
     }
 }

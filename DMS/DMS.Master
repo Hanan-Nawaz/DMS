@@ -20,8 +20,6 @@
 
 
 
-
-
     <link
         rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.11.0/mdb.min.css" />
@@ -63,11 +61,11 @@
 
                         <div class="dropdown">
                             <button class="btn btn-primary dropdown-toggle text-center list-group-item list-group-item-action py-2 ripple" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                               <i class="fas fa-users"></i> Labour Data
+                               <i class="fas fa-users"></i> Labor Data
                             </button>
                             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                <a class="dropdown-item" href="LabourData.aspx"> Labour Data Form</a>
-                                <a class="dropdown-item" href="ViewLabourData.aspx"> View Labour Data</a>
+                                <a class="dropdown-item" href="LabourData.aspx"> Labor Data Form</a>
+                                <a class="dropdown-item" href="ViewLabourData.aspx"> View Labor Data</a>
                                 <a class="dropdown-item" href="ViewAnnualGrossRevenue.aspx">View Annual Gross Revenue</a>
                                 <a class="dropdown-item" href="ViewModel.aspx">View Model</a>
                             </div>
@@ -98,7 +96,6 @@
                                 <a class="dropdown-item" href="ViewOpEXItemName.aspx"> View OpEx Item Name</a>
                             </div>
                         </div>
-
                     </div>
                 </div>
             </nav>

@@ -24,6 +24,15 @@ namespace DMS
         protected global::System.Web.UI.ScriptManager ScriptManager1;
 
         /// <summary>
+        /// Resetbn control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton Resetbn;
+
+        /// <summary>
         /// UpdatePanel1 control.
         /// </summary>
         /// <remarks>
@@ -42,33 +51,6 @@ namespace DMS
         protected global::System.Web.UI.WebControls.DropDownList ddl_LD_AGR;
 
         /// <summary>
-        /// tb_LD_AOD control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tb_LD_AOD;
-
-        /// <summary>
-        /// tb_LD_DOH control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tb_LD_DOH;
-
-        /// <summary>
-        /// tb_LD_AOH control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tb_LD_AOH;
-
-        /// <summary>
         /// UpdatePanel5 control.
         /// </summary>
         /// <remarks>
@@ -85,6 +67,33 @@ namespace DMS
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList ddl_LD_Model;
+
+        /// <summary>
+        /// tb_LD_AOD control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox tb_LD_AOD;
+
+        /// <summary>
+        /// tb_LD_AOH control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox tb_LD_AOH;
+
+        /// <summary>
+        /// tb_LD_DOH control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox tb_LD_DOH;
 
         /// <summary>
         /// tb_LD_Date control.
@@ -276,13 +285,22 @@ namespace DMS
         protected global::Microsoft.Reporting.WebForms.ReportViewer ReportViewerLD;
 
         /// <summary>
-        /// tb_AGR control.
+        /// tb_StartAGR control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tb_AGR;
+        protected global::System.Web.UI.WebControls.TextBox tb_StartAGR;
+
+        /// <summary>
+        /// tb_EndAGR control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox tb_EndAGR;
 
         /// <summary>
         /// btn_add_AGR control.

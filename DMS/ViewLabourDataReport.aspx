@@ -17,7 +17,7 @@
                     <div class="row">
                         <div class="col">
                             <center>
-                                <label style="color: blue; font-size: 20px; user-select: none;"><i class="fas fa-eye"></i>View Labour Data</label>
+                                <label style="color: blue; font-size: 20px; user-select: none;"><i class="fas fa-eye"></i>View Labor Data</label>
                             </center>
                         </div>
                     </div>
@@ -42,18 +42,24 @@
                             </div>
                         </div>
                         <div class="col-md-6">
-                            <label>Annual Operating Days</label>
+                            <label>Model</label>
                             <div class="form-group">
-                                <asp:TextBox CssClass="form-control" Enabled="false" ID="tb_LD_AOD" runat="server" TabIndex="2" TextMode="Number" placeholder="Annual Operating Days"></asp:TextBox>
+                                <asp:UpdatePanel ID="UpdatePanel5" runat="server">
+                                    <ContentTemplate>
+                                        <asp:DropDownList CssClass="form-control" ID="ddl_LD_Model" Enabled="false" TabIndex="4" runat="server" AutoPostBack="true">
+                                            <asp:ListItem Value="0">Select Model</asp:ListItem>
+                                        </asp:DropDownList>
+                                    </ContentTemplate>
+                                </asp:UpdatePanel>
                             </div>
                         </div>
                     </div>
 
                     <div class="row">
-                        <div class="col-md-6">
-                            <label>Daily Opearting Hours</label>
+                         <div class="col-md-6">
+                            <label>Annual Operating Days</label>
                             <div class="form-group">
-                                <asp:TextBox CssClass="form-control" ID="tb_LD_DOH" Enabled="false" runat="server" TabIndex="3" AutoPostBack="true" TextMode="Number" placeholder="Daily Opearting Hours"></asp:TextBox>
+                                <asp:TextBox CssClass="form-control" Enabled="false" ID="tb_LD_AOD" runat="server" TabIndex="2" TextMode="Number" placeholder="Annual Operating Days"></asp:TextBox>
                             </div>
                         </div>
                         <div class="col-md-6">
@@ -66,27 +72,17 @@
 
                     <div class="row">
                         <div class="col-md-6">
-                            <label>Model</label>
+                            <label>Daily Opearting Hours</label>
                             <div class="form-group">
-                                <asp:UpdatePanel ID="UpdatePanel5" runat="server">
-                                    <ContentTemplate>
-                                        <asp:DropDownList CssClass="form-control" ID="ddl_LD_Model" Enabled="false" TabIndex="4" runat="server" AutoPostBack="true">
-                                            <asp:ListItem Value="0">Select Model</asp:ListItem>
-                                        </asp:DropDownList>
-                                    </ContentTemplate>
-                                </asp:UpdatePanel>
+                                <asp:TextBox CssClass="form-control" ID="tb_LD_DOH" Enabled="false" runat="server" TabIndex="3" AutoPostBack="true" TextMode="Number" placeholder="Daily Opearting Hours"></asp:TextBox>
                             </div>
                         </div>
-                        <div class="col-md-3">
-                            <label>Labour Data Date</label>
+                       
+                        
+                        <div class="col-md-6">
+                            <label>Labor Data Date</label>
                             <div class="form-group">
-                                <asp:TextBox CssClass="form-control" ID="tb_LD_Date" Enabled="false" TextMode="Date" runat="server" TabIndex="5" placeholder=""></asp:TextBox>
-                            </div>
-                        </div>
-                         <div class="col-md-3">
-                            <label>Saved Date</label>
-                            <div class="form-group">
-                                <asp:TextBox CssClass="form-control" ID="tb_saveDate" Enabled="false" runat="server" TabIndex="5" placeholder=""></asp:TextBox>
+                                <asp:TextBox CssClass="form-control" ID="tb_LD_Date" Enabled="false" runat="server" TabIndex="5" placeholder=""></asp:TextBox>
                             </div>
                         </div>
                     </div>
@@ -95,10 +91,10 @@
                     </div>
 
                     <div class="row mt-2">
-                        <label class="font-weight-bold text-primary">GM Labour</label>
+                        <label class="font-weight-bold text-primary">MG Labor</label>
 
                         <div class="col-md-3">
-                            <label>Number of Labour</label>
+                            <label>Number of Labor</label>
                             <div class="form-group">
                                 <asp:TextBox CssClass="form-control" ID="tb_LDGM_NoL" Enabled="false" TabIndex="6" runat="server" placeholder="Number of Labour"></asp:TextBox>
                             </div>
@@ -127,10 +123,10 @@
                     </div>
 
                     <div class="row mt-2">
-                        <label class="font-weight-bold text-primary">AM Labour</label>
+                        <label class="font-weight-bold text-primary">AM Labor</label>
 
                         <div class="col-md-3">
-                            <label>Number of Labour</label>
+                            <label>Number of Labor</label>
                             <div class="form-group">
                                 <asp:TextBox CssClass="form-control" ID="tb_LDAM_NoL" Enabled="false" runat="server" TabIndex="10" placeholder="Number of Labour"></asp:TextBox>
                             </div>
@@ -159,9 +155,9 @@
                     </div>
 
                     <div class="row mt-2">
-                        <label class="font-weight-bold text-primary">CREW Labour</label>
+                        <label class="font-weight-bold text-primary">CREW Labor</label>
                         <div class="col-md-3">
-                            <label>Number of Labour</label>
+                            <label>Number of Labor</label>
                             <div class="form-group">
                                 <asp:TextBox CssClass="form-control" ID="tb_LDCREW_NoL" Enabled="false" runat="server" TabIndex="14" placeholder="Number of Labour"></asp:TextBox>
                             </div>
@@ -193,19 +189,19 @@
                         <label class="font-weight-bold text-primary">Annual Wage</label>
 
                         <div class="col-md-3">
-                            <label>GM Labour</label>
+                            <label>MG Labor</label>
                             <div class="form-group">
                                 <asp:TextBox CssClass="form-control" ID="tb_LDGM_W" runat="server" Enabled="false" placeholder="GM Labour"></asp:TextBox>
                             </div>
                         </div>
                         <div class="col-md-3">
-                            <label>AM Labour</label>
+                            <label>AM Labor</label>
                             <div class="form-group">
                                 <asp:TextBox CssClass="form-control" ID="tb_LDAM_W" runat="server" Enabled="false" placeholder="AM Labour"></asp:TextBox>
                             </div>
                         </div>
                         <div class="col-md-3">
-                            <label>CREW Labour</label>
+                            <label>CREW Labor</label>
                             <div class="form-group">
                                 <asp:TextBox CssClass="form-control" ID="tb_LDCREW_W" runat="server" Enabled="false" placeholder="CREW Labour"></asp:TextBox>
                             </div>

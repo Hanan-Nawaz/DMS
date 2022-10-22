@@ -353,7 +353,12 @@
 
                     <div class="row">
                         <label class="font-weight-bold">Sales Revenue</label>
-
+                        <div class="col-md-6">
+                            <label>Gross Sales</label>
+                            <div class="form-group">
+                                <asp:TextBox CssClass="form-control" ID="tb_PL_GrossSales" AutoPostBack="true" runat="server" TabIndex="2" placeholder="Gross Sales" ReadOnly="true"></asp:TextBox>
+                            </div>
+                        </div>
                         <div class="col-md-6">
                             <label>Model</label>
                             <div class="form-group">
@@ -364,13 +369,6 @@
                                         </asp:DropDownList>
                                     </ContentTemplate>
                                 </asp:UpdatePanel>
-                            </div>
-                        </div>
-                       
-                        <div class="col-md-6">
-                            <label>Gross Sales</label>
-                            <div class="form-group">
-                                <asp:TextBox CssClass="form-control" ID="tb_PL_GrossSales" AutoPostBack="true" runat="server" TabIndex="2" placeholder="Gross Sales" ReadOnly="true"></asp:TextBox>
                             </div>
                         </div>
                     </div>

@@ -27,8 +27,6 @@
             border: 2px solid white;
             font-size: 16px;
         }
-
-
         .rows {
             background-color: #fff;
             font-family: Arial;
@@ -37,12 +35,10 @@
             min-height: 20px;
             text-align: center;
         }
-
         .mydatagrid td {
             padding: 5px;
             border: solid 1px Blue;
         }
-
         .mydatagrid th {
             padding: 5px;
             border: solid 1px white;
@@ -50,16 +46,11 @@
     </style>
 
     <script>
-
         var obj = { status: false, ele: null };
-
         function CheckError(stat, text) {
-
             if (obj.status) {
                 return true;
             }
-
-
             swal({
                 title: "Warning",
                 text: text,
@@ -79,21 +70,16 @@
                         swal("Cancelled", "Process cancelled :)", "error");
                     }
                 });
-
             return false;
         };
     </script>
 
     <script>
-
         var obj = { status: false, ele: null };
-
         function VerifyError(stat) {
-
             if (obj.status) {
                 return true;
             }
-
             var rowCount = 0;
             var gridView = document.getElementById("<%=girdviewPL.ClientID %>");
             var rows = gridView.getElementsByTagName("tr")
@@ -102,9 +88,7 @@
                     rowCount++;
                 }
             }
-
             if (rowCount > 1) {
-
                 swal({
                     title: "Warning",
                     text: "By closing You lost all Data you Entered. Are you Sure you want to close this PopUP? OtherWise Save it.",
@@ -126,14 +110,10 @@
                     });
             }
             else {
-
-
                 obj.status = true;
                 obj.ele = stat;
                 obj.ele.click();
-
             }
-
             var rowCountLE = 0;
             var gridViewLE = document.getElementById("<%=girdviewPLE.ClientID %>");
             var rowsLE = gridViewLE.getElementsByTagName("tr")
@@ -142,9 +122,7 @@
                     rowCountLE++;
                 }
             }
-
             if (rowCountLE > 1) {
-
                 swal({
                     title: "Warning",
                     text: "By closing You lost all Data you Entered. Are you Sure you want to close this PopUP? OtherWise Save it.",
@@ -166,14 +144,10 @@
                     });
             }
             else {
-
-
                 obj.status = true;
                 obj.ele = stat;
                 obj.ele.click();
-
             }
-
             var rowCountOpEx = 0;
             var gridViewOpEx = document.getElementById("<%=girdviewPLE.ClientID %>");
             var rowsOpEx = gridViewOpEx.getElementsByTagName("tr")
@@ -182,9 +156,7 @@
                     rowCountOpEx++;
                 }
             }
-
             if (rowCountOpEx > 1) {
-
                 swal({
                     title: "Warning",
                     text: "By closing You lost all Data you Entered. Are you Sure you want to close this PopUP? OtherWise Save it.",
@@ -206,30 +178,20 @@
                     });
             }
             else {
-
-
                 obj.status = true;
                 obj.ele = stat;
                 obj.ele.click();
-
             }
-
-
-
             return false;
         };
     </script>
 
     <script>
-
         var obj = { status: false, ele: null };
-
         function VerifyErrorLE(stat) {
-
             if (obj.status) {
                 return true;
             }
-
             var rowCountLE = 0;
             var gridViewLE = document.getElementById("<%=girdviewPLE.ClientID %>");
             var rowsLE = gridViewLE.getElementsByTagName("tr")
@@ -238,9 +200,7 @@
                     rowCountLE++;
                 }
             }
-
             if (rowCountLE > 1) {
-
                 swal({
                     title: "Warning",
                     text: "By closing You lost all Data you Entered. Are you Sure you want to close this PopUP? OtherWise Save it.",
@@ -262,30 +222,20 @@
                     });
             }
             else {
-
-
                 obj.status = true;
                 obj.ele = stat;
                 obj.ele.click();
-
             }
-
-
-
             return false;
         };
     </script>
 
     <script>
-
         var obj = { status: false, ele: null };
-
         function confirmError(stat, heading, headingtext, headtype, cancelmsg, cancelhead) {
-
             if (obj.status) {
                 return true;
             }
-
             swal({
                 title: heading,
                 text: headingtext,
@@ -300,27 +250,18 @@
                         // obj.status = true;
                         // obj.ele = stat;
                         // obj.ele.onclick();
-
                     }
                     else {
-
-
-
                         swal(cancelhead, cancelmsg, "error");
-
-
                     }
                 });
-
-
-
             return false;
         };
     </script>
 
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <asp:ScriptManager ID="ScriptManager1" runat="server" />
+   <asp:ScriptManager ID="ScriptManager1" runat="server" />
 
     <div class="container-fluid">
 
@@ -330,7 +271,7 @@
                     <div class="row">
                         <div class="col">
                             <center>
-                                <label style="color: blue; font-size: 20px; user-select: none;"><i class="fas fa-pencil"></i>Edit Profit and Loss</label>
+                                <label style="color: blue; font-size: 20px; user-select: none;"><i class="fas fa-money-bill-alt"></i>Profit and Loss</label>
                             </center>
                         </div>
                     </div>
@@ -342,22 +283,24 @@
                     </div>
 
                     <div class="row mt-2">
-                        <div class="col-md-11">
-                           
-                        </div>
-                        
+                        <div class="col-md-11"></div>
                         <div class="col-md-1">
-                            <label></label>
                             <div class="form-group">
-                                <a class="btn btn-danger text-white" runat="server" style="margin-top: 8px;" href="ProfitLoss.aspx">Reset</a>
+                                <asp:LinkButton class="btn btn-danger text-white" runat="server" ID="Resetbn" OnClick="Resetbn_Click" OnClientClick="return Error(this);">Reset</asp:LinkButton>
                             </div>
                         </div>
                     </div>
 
+
                     <div class="row">
                         <label class="font-weight-bold">Sales Revenue</label>
-
-                        <div class="col-md-5">
+                        <div class="col-md-6">
+                            <label>Gross Sales</label>
+                            <div class="form-group">
+                                <asp:TextBox CssClass="form-control" ID="tb_PL_GrossSales" AutoPostBack="true" TabIndex="3" runat="server" placeholder="Gross Sales" OnTextChanged="tb_PL_GrossSales_TextChanged"></asp:TextBox>
+                            </div>
+                        </div>
+                         <div class="col-md-5">
                             <label>Model</label>
                             <div class="form-group">
                                 <asp:UpdatePanel ID="UpdatePanel5" runat="server">
@@ -369,20 +312,15 @@
                                 </asp:UpdatePanel>
                             </div>
                         </div>
+                        
                         <div class="col-md-1">
                             <label></label>
                             <div class="form-group">
                                 <div class="form-group">
-                                    <button type="button" class="btn btn-primary" style="margin-top: 8px;" data-toggle="modal" data-target="#Model">
+                                    <button type="button" class="btn btn-primary" style="margin-top: 8px;" TabIndex="2" data-toggle="modal" data-target="#Model">
                                         +
                                     </button>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <label>Gross Sales</label>
-                            <div class="form-group">
-                                <asp:TextBox CssClass="form-control" ID="tb_PL_GrossSales" AutoPostBack="true" runat="server" TabIndex="2" placeholder="Gross Sales" OnTextChanged="tb_PL_GrossSales_TextChanged"></asp:TextBox>
                             </div>
                         </div>
                     </div>
@@ -392,7 +330,7 @@
                         <div class="col-md-6">
                             <label>Cash Sales</label>
                             <div class="form-group">
-                                <asp:TextBox CssClass="form-control" ID="tb_PL_CashSales" runat="server" AutoPostBack="true" TabIndex="3" placeholder="Cash Sales" OnTextChanged="tb_PL_CashSales_TextChanged"></asp:TextBox>
+                                <asp:TextBox CssClass="form-control" ID="tb_PL_CashSales" runat="server" AutoPostBack="true" TabIndex="4" placeholder="Cash Sales" OnTextChanged="tb_PL_CashSales_TextChanged"></asp:TextBox>
                             </div>
                         </div>
 
@@ -410,7 +348,7 @@
                         <div class="col-md-6">
                             <label>Non Cash Sales</label>
                             <div class="form-group">
-                                <asp:TextBox CssClass="form-control" ID="tb_PL_non_CashSales" runat="server" AutoPostBack="true" TabIndex="4" placeholder="Non Cash Sales" OnTextChanged="tb_PL_non_CashSales_TextChanged"></asp:TextBox>
+                                <asp:TextBox CssClass="form-control" ID="tb_PL_non_CashSales"  runat="server" AutoPostBack="true" TabIndex="5" placeholder="Non Cash Sales" OnTextChanged="tb_PL_non_CashSales_TextChanged"></asp:TextBox>
                             </div>
                         </div>
                         <div class="col-md-6">
@@ -448,19 +386,15 @@
                         <div class="col-md-6">
                             <label>Data Date</label>
                             <div class="form-group">
-                                <asp:TextBox CssClass="form-control" ID="tb_PL_Date" TextMode="Date" runat="server" TabIndex="5" placeholder=""></asp:TextBox>
+                                <asp:TextBox CssClass="form-control" ID="tb_PL_Date" Enabled="false" runat="server" TabIndex="6" placeholder=""></asp:TextBox>
                             </div>
                         </div>
-                        <div class="col-md-3">
-                            <div class="form-group">
-                                <asp:TextBox CssClass="form-control" Visible="false" ID="tb_PL_id" runat="server" ReadOnly="true"></asp:TextBox>
-                            </div>
-                        </div>
-                        <div class="col-md-2">
+                        <div class="col-md-6">
                             <label></label>
+                                <asp:TextBox CssClass="form-control" Visible="false" ID="tb_PL_id" runat="server" ReadOnly="true" Height="0"></asp:TextBox>
                             <div class="form-group">
-                                <button type="button" class="btn btn-primary" style="margin-top: 8px;" data-toggle="modal" data-target="#Values">
-                                    Add Values
+                                <button type="button" class="btn btn-primary" style="margin-top: 8px; width: 100%;" TabIndex="7" data-toggle="modal" data-target="#Values">
+                                    Add Card Fee / Payroll Tax / Opeator / Insurance
                                 </button>
                             </div>
                         </div>
@@ -474,7 +408,7 @@
                             <label></label>
                             <div class="form-group">
                                 <div class="form-group">
-                                    <button type="button" class="btn btn-primary" style="margin-top: 8px; width: 100%;" data-toggle="modal" data-target="#COGS">
+                                    <button type="button" class="btn btn-primary" style="margin-top: 8px; width: 100%;" TabIndex="8"  Width="100%" data-toggle="modal" data-target="#COGS">
                                         Add Cost of Goods Sold
                                     </button>
                                 </div>
@@ -529,7 +463,7 @@
                             <div class="form-group">
                                 <asp:UpdatePanel ID="UpdatePanel2" runat="server">
                                     <ContentTemplate>
-                                        <asp:DropDownList CssClass="form-control" ID="ddl_PL_LabourModel" TabIndex="1" runat="server" AutoPostBack="true">
+                                        <asp:DropDownList CssClass="form-control" ID="ddl_PL_LabourModel" TabIndex="9" runat="server" AutoPostBack="true">
                                             <asp:ListItem Value="0">Select Labour Model</asp:ListItem>
                                         </asp:DropDownList>
                                     </ContentTemplate>
@@ -540,7 +474,7 @@
                             <label></label>
                             <div class="form-group">
                                 <div class="form-group">
-                                    <button type="button" class="btn btn-primary" style="margin-top: 8px;" data-toggle="modal" data-target="#LabourExpenseModel">
+                                    <button type="button" class="btn btn-primary" style="margin-top: 8px;" TabIndex="10" data-toggle="modal" data-target="#LabourExpenseModel">
                                         +
                                     </button>
                                 </div>
@@ -551,7 +485,7 @@
                             <label></label>
                             <div class="form-group">
                                 <div class="form-group">
-                                    <button type="button" class="btn btn-primary" style="margin-top: 8px; width: 100%;" data-toggle="modal" data-target="#COL">
+                                    <button type="button" class="btn btn-primary" style="margin-top: 8px; width: 100%" TabIndex="11" Width: "100%" data-toggle="modal" data-target="#COL">
                                         Add Cost of Labour
                                     </button>
                                 </div>
@@ -608,19 +542,18 @@
 
                     </div>
 
-                    <div class="row mt-3">
-
+                    <div class="row">
                         <div class="col-md-6">
-                            <label>Add Insurance</label>
+                            <label>View Insurance % You Added</label>
                             <div class="form-group">
                                 <asp:UpdatePanel ID="UpdatePanel4" runat="server">
                                     <ContentTemplate>
                                         <asp:TextBox CssClass="form-control" AutoPostBack="true" ID="tbGetInsurance" runat="server" ReadOnly="true"></asp:TextBox>
                                     </ContentTemplate>
-
                                 </asp:UpdatePanel>
                             </div>
                         </div>
+                         
 
                     </div>
 
@@ -642,11 +575,12 @@
                             </div>
                         </div>
                         <div class="col-md-6">
-                            <label>Payroll Tax %</label>
+                            <label>Payroll Tax % You Added</label>
                             <div class="form-group">
                                 <asp:TextBox CssClass="form-control" ID="tbGetPayrollTax" runat="server" ReadOnly="true"></asp:TextBox>
                             </div>
                         </div>
+                        
                     </div>
 
                     <div class="row border border-bottom-1 border-primary">
@@ -657,7 +591,7 @@
                          <div class="col-md-6">
                             <label></label>
                                 <div class="form-group">
-                                    <button type="button" class="btn btn-primary" style="margin-top: 8px; width: 100%;" data-toggle="modal" data-target="#OpEx">
+                                    <button type="button" class="btn btn-primary" style="margin-top: 8px; width: 100%;" TabIndex="12" data-toggle="modal" data-target="#OpEx">
                                         Add Operating Expense
                                     </button>
                                 </div>
@@ -686,11 +620,12 @@
                         <label class="font-weight-bold">Card Processing Fee</label>
                        
                         <div class="col-md-6">
-                            <label>Card Fee</label>
+                            <label>Card Fee % You Added</label>
                             <div class="form-group">
                                 <asp:TextBox CssClass="form-control" ID="tbCardProcessingFee" runat="server" ReadOnly="true"></asp:TextBox>
                             </div>
                         </div>
+                         
                     </div>
 
                     <div class="row">
@@ -774,7 +709,7 @@
                         <label class="font-weight-bold text-primary">Notes</label>
                         <div class="col-md">
                             <div class="form-outline">
-                                <asp:TextBox ID="ta_LD_Notes" class="form-control border border-1 border-primary" TextMode="multiline" Columns="50" Rows="5" runat="server" />
+                                <asp:TextBox ID="ta_LD_Notes" class="form-control border border-1 border-primary" TabIndex="13" TextMode="multiline" Columns="50" Rows="5" runat="server" />
                             </div>
                         </div>
                     </div>
@@ -783,7 +718,7 @@
                         <div class="col-4 mx-auto">
                             <center>
                                 <div class="form-group">
-                                    <asp:Button class="btn btn-primary btn-block btn-lg" ID="btn_PL_Calculate"  runat="server" Text="Analyze" OnClick="btn_PL_Calculate_Click" />
+                                    <asp:Button class="btn btn-primary btn-block btn-lg" TabIndex="14" ID="btn_PL_Calculate"  runat="server" Text="Run" OnClick="btn_PL_Calculate_Click" />
                                 </div>
                             </center>
                         </div>
@@ -793,7 +728,7 @@
                         <div class="col-4 mx-auto">
                             <center>
                                 <div class="form-group">
-                                    <asp:Button class="btn btn-primary btn-block btn-lg" ID="btn_Save_toDB" runat="server" Text="Save to DB" OnClick="btn_Save_toDB_Click" />
+                                    <asp:Button class="btn btn-primary btn-block btn-lg" TabIndex="15" ID="btn_Save_toDB" runat="server" Text="Save" OnClick="btn_Save_toDB_Click" />
                                 </div>
                             </center>
                         </div>
@@ -810,7 +745,10 @@
             <div class="modal-dialog modal-dialog-centered" role="document">
                 <div class="modal-content">
                     <div class="modal-header border-bottom-0">
-                        <h5 class="modal-title" id="exampleModalLabel09">Add Values</h5>
+                        <h class="modal-title" id="exampleModalLabel09">Add Card Fee / Insurance / Operator / Payroll Tax</h>
+                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
                     </div>
                     <div class="row m-1">
                         <div class="col-md">
@@ -828,7 +766,6 @@
                                     <ContentTemplate>
                                 <asp:TextBox CssClass="form-control" ID="tbInsuranceExp" runat="server" placeholder="Insurance"></asp:TextBox>
                                     </ContentTemplate>
-
                                 </asp:UpdatePanel>
                             </div>
                         </div>
@@ -1414,4 +1351,3 @@
 
     </div>
 </asp:Content>
-

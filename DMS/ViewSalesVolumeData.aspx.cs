@@ -57,7 +57,7 @@ namespace DMS
         protected void del_btn_Click(object sender, EventArgs e)
         {
             id = Convert.ToString((sender as LinkButton).CommandArgument);
-            string SuccessMsg = "Sales Volume Data with ID " + id + " is deleted Successfully :)";
+            string SuccessMsg = "Sales Volume Data Deleted Successfully";
 
             SqlConnection con = new SqlConnection();
             con.ConnectionString = ConfigurationManager.ConnectionStrings["con"].ConnectionString; con.Open();
@@ -68,7 +68,7 @@ namespace DMS
             con.Close();
             if (i > 0)
             {
-                ClientScript.RegisterClientScriptBlock(this.GetType(), "k", "swal('Congratulation', '" + SuccessMsg + "' , 'success')", true);
+                ClientScript.RegisterClientScriptBlock(this.GetType(), "k", "swal('Congratulations', '" + SuccessMsg + "' , 'success')", true);
                 BindGrid();
             }
             else

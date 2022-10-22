@@ -122,7 +122,6 @@ namespace DMS
                 {
                     tb_LD_TW.ForeColor = Color.Black;
                 }
-                tb_saveDate.Text = reader["saved_date"].ToString();
                 ta_LD_Notes.Text = reader["notes"].ToString();
                 break;
             }

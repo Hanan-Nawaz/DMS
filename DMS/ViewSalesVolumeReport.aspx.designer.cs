@@ -33,51 +33,6 @@ namespace DMS
         protected global::System.Web.UI.WebControls.TextBox tb_SD_AGR;
 
         /// <summary>
-        /// tb_SD_AOD control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tb_SD_AOD;
-
-        /// <summary>
-        /// tb_SD_DOH control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tb_SD_DOH;
-
-        /// <summary>
-        /// tb_SD_ASr control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tb_SD_ASr;
-
-        /// <summary>
-        /// tb_SD_date control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tb_SD_date;
-
-        /// <summary>
-        /// tb_SD_SaveDate control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tb_SD_SaveDate;
-
-        /// <summary>
         /// tb_SD_DGR control.
         /// </summary>
         /// <remarks>
@@ -85,6 +40,15 @@ namespace DMS
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox tb_SD_DGR;
+
+        /// <summary>
+        /// tb_SD_AOD control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox tb_SD_AOD;
 
         /// <summary>
         /// tb_SD_HGR control.
@@ -96,6 +60,15 @@ namespace DMS
         protected global::System.Web.UI.WebControls.TextBox tb_SD_HGR;
 
         /// <summary>
+        /// tb_SD_DOH control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox tb_SD_DOH;
+
+        /// <summary>
         /// tb_SD_HSO control.
         /// </summary>
         /// <remarks>
@@ -105,6 +78,15 @@ namespace DMS
         protected global::System.Web.UI.WebControls.TextBox tb_SD_HSO;
 
         /// <summary>
+        /// tb_SD_ASr control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox tb_SD_ASr;
+
+        /// <summary>
         /// tb_SD_DSO control.
         /// </summary>
         /// <remarks>
@@ -112,6 +94,15 @@ namespace DMS
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox tb_SD_DSO;
+
+        /// <summary>
+        /// tb_SD_date control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox tb_SD_date;
 
         /// <summary>
         /// tb_SD_ASO control.
